@@ -11,8 +11,8 @@ import com.lowagie.text.pdf.PdfWriter;
 public abstract class PdfDocument {
 	private final static String DEFAULT_DOCUMENT_NAME = "Form document PDF";
 	private final static String DEFAULT_DOCUMENT_SUBJECT = "Form document PDF";
-	private final static String DOCUMENT_AUTHOR = "BiiT";
-	private final static String DOCUMENT_CREATOR = "BiiT";
+	private final static String DOCUMENT_AUTHOR = "BiiT Sourcing Solutions S.L.";
+	private final static String DOCUMENT_CREATOR = "BiiT Sourcing Solutions S.L.";
 
 	private final static int MARGIN_RIGHT = 30;
 	private final static int MARGIN_LEFT = 30;
