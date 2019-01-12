@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="FormResult">
+	<test name="FormResultPdf" enabled="true" preserve-order="true">
+		<groups>
+			<run>
+				<!--  <include name="hierarchyTest" /> -->
+			</run>
+		</groups>
+		<classes>
+			<!-- <class name="com.biit.form.validators.ValidationTest" /> -->
+		</classes>
+	</test>
+</suite>
+
