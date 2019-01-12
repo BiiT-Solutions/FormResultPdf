@@ -38,6 +38,7 @@
 		<org.testng.version>6.8.7</org.testng.version>
 		<maven-release-plugin.version>2.5.1</maven-release-plugin.version>
 		<maven-scm-provider-gitexe.version>1.9.2</maven-scm-provider-gitexe.version>
+		<itext.version>2.1.7</itext.version>
 		<!-- BiiT dependencies -->
 		<form-structure.version>[1.1, 1.2)</form-structure.version>
 	</properties>
@@ -47,6 +48,11 @@
 			<groupId>com.biit</groupId>
 			<artifactId>form-structure</artifactId>
 			<version>${form-structure.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>${itext.version}</version>
 		</dependency>
 		<!-- Testing -->
 		<dependency>
