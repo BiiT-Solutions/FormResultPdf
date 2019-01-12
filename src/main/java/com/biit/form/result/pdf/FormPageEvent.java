@@ -35,25 +35,23 @@ public class FormPageEvent extends PdfPageEventHelper {
 	public void onEndPage(PdfWriter writer, Document document) {
 		PdfPTable table = new PdfPTable(3);
 
-		int pageNumber = writer.getPageNumber();
+		//int pageNumber = writer.getPageNumber();
 
-		if (pageNumber > 1) {
-			try {
-				table.setWidths(new int[] { 24, 24, 2 });
-				table.setTotalWidth(527);
-				table.setLockedWidth(true);
-				table.getDefaultCell().setFixedHeight(20);
-				table.getDefaultCell().setBorder(Rectangle.BOTTOM);
-				table.addCell(header);
-				table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_RIGHT);
-				table.addCell(String.format("Page %d of", writer.getPageNumber()));
-				PdfPCell cell = new PdfPCell(Image.getInstance(total));
-				cell.setBorder(Rectangle.BOTTOM);
-				table.addCell(cell);
-				table.writeSelectedRows(0, -1, 34, 803, writer.getDirectContent());
-			} catch (DocumentException de) {
-				throw new ExceptionConverter(de);
-			}
+		try {
+			table.setWidths(new int[] { 24, 24, 2 });
+			table.setTotalWidth(527);
+			table.setLockedWidth(true);
+			table.getDefaultCell().setFixedHeight(20);
+			table.getDefaultCell().setBorder(Rectangle.TOP);
+			table.addCell(header);
+			table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_RIGHT);
+			table.addCell(String.format("Page %d of", writer.getPageNumber()));
+			PdfPCell cell = new PdfPCell(Image.getInstance(total));
+			cell.setBorder(Rectangle.TOP);
+			table.addCell(cell);
+			table.writeSelectedRows(0, -1, 34, document.bottom(), writer.getDirectContent());
+		} catch (DocumentException de) {
+			throw new ExceptionConverter(de);
 		}
 	}
 

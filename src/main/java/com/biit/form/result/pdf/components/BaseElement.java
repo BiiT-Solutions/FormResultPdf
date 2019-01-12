@@ -94,7 +94,20 @@ public class BaseElement {
 	public static void setTablePropierties(PdfPTable table) {
 		table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_LEFT);
 		table.getDefaultCell().setVerticalAlignment(Element.ALIGN_MIDDLE);
+		setCellProperties(table.getDefaultCell());
 		table.setWidthPercentage(100);
 		table.setSpacingBefore(0);
+	}
+
+	public static PdfPCell createWhiteSeparator(int height) {
+		PdfPCell cell = new PdfPCell();
+		cell.setBackgroundColor(Color.WHITE);
+		setCellProperties(cell);
+		cell.setMinimumHeight(height);
+		return cell;
+	}
+
+	public static PdfPCell createWhiteSeparator() {
+		return createWhiteSeparator(6);
 	}
 }

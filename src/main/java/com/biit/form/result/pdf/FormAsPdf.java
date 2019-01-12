@@ -34,7 +34,7 @@ public class FormAsPdf extends PdfDocument {
 
 	@Override
 	protected void createPagePDF(Document document) throws InvalidElementException, DocumentException {
-		PdfPTable mainTable = FormResultTableFactory.getFormStructureTable(formResult);
+		PdfPTable mainTable = FormResultTableFactory.createElementPdfStructure(formResult);
 		document.add(mainTable);
 		document.newPage();
 	}

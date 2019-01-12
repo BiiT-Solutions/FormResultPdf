@@ -20,9 +20,9 @@ public class Theme {
 	public final static String ANSWER_FONT_NAME = "ArchitectsDaughter.ttf";
 
 	public final static int FORM_FONT_SIZE = 18;
-	public final static int CATEGORY_FONT_SIZE = 16;
-	public final static int GROUP_FONT_SIZE = 14;
-	public final static int QUESTION_FONT_SIZE = 12;
+	public final static int CATEGORY_FONT_SIZE = 14;
+	public final static int GROUP_FONT_SIZE = 13;
+	public final static int QUESTION_FONT_SIZE = 11;
 	public final static int ANSWER_FONT_SIZE = 10;
 
 	public final static int DEFAULT_MARGIN = 3;

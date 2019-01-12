@@ -20,7 +20,7 @@ public abstract class PdfDocument {
 	private final static int MARGIN_RIGHT = 30;
 	private final static int MARGIN_LEFT = 30;
 	private final static int MARGIN_TOP = 30;
-	private final static int MARGIN_BOTTON = 30;
+	private final static int MARGIN_BOTTON = 60;
 
 	private PdfWriter writer;
 
