@@ -2,7 +2,9 @@ package com.biit.form.result.pdf;
 
 import com.biit.form.result.FormResult;
 import com.biit.form.result.pdf.components.FormResultTableFactory;
+import com.biit.form.result.pdf.exceptions.InvalidElementException;
 import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
 import com.lowagie.text.PageSize;
 import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.PdfPTable;
@@ -31,7 +33,7 @@ public class FormAsPdf extends PdfDocument {
 	}
 
 	@Override
-	protected void createPagePDF(Document document) throws Exception {
+	protected void createPagePDF(Document document) throws InvalidElementException, DocumentException {
 		PdfPTable mainTable = FormResultTableFactory.getFormStructureTable(formResult);
 		document.add(mainTable);
 		document.newPage();

@@ -3,11 +3,11 @@
 	<test name="FormResultPdf" enabled="true" preserve-order="true">
 		<groups>
 			<run>
-				<!--  <include name="hierarchyTest" /> -->
+				<include name="eminForm" />
 			</run>
 		</groups>
 		<classes>
-			<!-- <class name="com.biit.form.validators.ValidationTest" /> -->
+			<class name="com.biit.form.result.pdf.EminTest" />
 		</classes>
 	</test>
 </suite>

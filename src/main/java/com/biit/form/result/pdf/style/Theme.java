@@ -14,12 +14,14 @@ public class Theme {
 	public final static String QUESTION_FONT_NAME = "DejaVuSansCondensed.ttf";
 	public final static String LINE_FONT_ITALIC_NAME = "DejaVuSansCondensed-Oblique.ttf";
 	public final static String CATEGORY_FONT_NAME = "DejaVuSansCondensed-Oblique.ttf";
+	public final static String GROUP_FONT_NAME = "DejaVuSansCondensed-Oblique.ttf";
 	public final static String LINE_BOLD_FONT_NAME = "DejaVuSansCondensed-Bold.ttf";
 	public final static String FORM_FONT_NAME = "Roman Antique.ttf";
 	public final static String ANSWER_FONT_NAME = "ArchitectsDaughter.ttf";
 
 	public final static int FORM_FONT_SIZE = 18;
 	public final static int CATEGORY_FONT_SIZE = 16;
+	public final static int GROUP_FONT_SIZE = 14;
 	public final static int QUESTION_FONT_SIZE = 12;
 	public final static int ANSWER_FONT_SIZE = 10;
 
@@ -30,6 +32,7 @@ public class Theme {
 	private static BaseFont lineBoldFont;
 	private static BaseFont formFont;
 	private static BaseFont categoryFont;
+	private static BaseFont groupFont;
 	private static BaseFont questionFont;
 	private static BaseFont answerFont;
 
@@ -47,6 +50,14 @@ public class Theme {
 			categoryFont = font.getBaseFont();
 		}
 		return categoryFont;
+	}
+
+	public static BaseFont getGroupFont() {
+		if (groupFont == null) {
+			Font font = FontFactory.getFont("/" + GROUP_FONT_NAME, BaseFont.IDENTITY_H, BaseFont.EMBEDDED, 0.8f, Font.ITALIC, Color.BLACK);
+			groupFont = font.getBaseFont();
+		}
+		return groupFont;
 	}
 
 	public static BaseFont getQuestionFont() {

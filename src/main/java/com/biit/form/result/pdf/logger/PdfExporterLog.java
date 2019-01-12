@@ -1,4 +1,4 @@
-package com.biit.form.result.pdf;
+package com.biit.form.result.pdf.logger;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

@@ -1,10 +1,13 @@
 package com.biit.form.result.pdf;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import com.biit.form.result.pdf.exceptions.EmptyPdfBodyException;
+import com.biit.form.result.pdf.exceptions.InvalidElementException;
 import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
 import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.PdfWriter;
 
@@ -30,7 +33,7 @@ public abstract class PdfDocument {
 		return document;
 	}
 
-	protected void generatePDF(Document document, PdfWriter writer) throws EmptyPdfBodyException, Exception {
+	protected void generatePDF(Document document, PdfWriter writer) throws EmptyPdfBodyException, InvalidElementException, DocumentException {
 		addMetaData(document);
 		document.open();
 		createPagePDF(document);
@@ -47,25 +50,24 @@ public abstract class PdfDocument {
 
 	protected abstract void addDocumentWriterEvents(PdfWriter writer);
 
-	public final byte[] generate() throws Exception {
+	public final byte[] generate() throws EmptyPdfBodyException, DocumentException, InvalidElementException {
 		Document document = generateDocument();
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		try {
-			PdfWriter writer = PdfWriter.getInstance(document, baos);
-			// TableFooter event = new TableFooter();
-			// writer.setPageEvent(event);
-			addEvent(writer);
-			generatePDF(document, writer);
-			return baos.toByteArray();
-		} catch (NullPointerException e) {
-			PdfExporterLog.errorMessage(this.getClass().getName(), e);
-			throw e;
-		} catch (EmptyPdfBodyException | IOException e) {
-			PdfExporterLog.errorMessage(this.getClass().getName(), e);
-			throw e;
-		} catch (Exception e) {
-			PdfExporterLog.errorMessage(this.getClass().getName(), e);
-			throw e;
+		PdfWriter writer = PdfWriter.getInstance(document, baos);
+		// TableFooter event = new TableFooter();
+		// writer.setPageEvent(event);
+		addEvent(writer);
+		generatePDF(document, writer);
+		return baos.toByteArray();
+	}
+
+	public void createFile(String path) throws IOException, EmptyPdfBodyException, DocumentException, InvalidElementException {
+		if (!path.endsWith(".pdf")) {
+			path += ".pdf";
+		}
+
+		try (FileOutputStream fos = new FileOutputStream(path)) {
+			fos.write(generate());
 		}
 	}
 
@@ -75,5 +77,5 @@ public abstract class PdfDocument {
 
 	protected abstract Rectangle getPageSize();
 
-	protected abstract void createPagePDF(Document document) throws Exception;
+	protected abstract void createPagePDF(Document document) throws InvalidElementException, DocumentException;
 }

@@ -9,6 +9,7 @@ import com.biit.form.entity.TreeObject;
 import com.biit.form.result.CategoryResult;
 import com.biit.form.result.FormResult;
 import com.biit.form.result.QuestionWithValueResult;
+import com.biit.form.result.RepeatableGroupResult;
 import com.biit.form.result.pdf.exceptions.InvalidElementException;
 import com.biit.form.result.pdf.style.Theme;
 import com.lowagie.text.Element;
@@ -55,6 +56,8 @@ public class FormResultTableFactory extends BaseElement {
 			return createLine((CategoryResult) element);
 		} else if (element instanceof QuestionWithValueResult) {
 			return createLine((QuestionWithValueResult) element);
+		} else if (element instanceof RepeatableGroupResult) {
+			return createLine((RepeatableGroupResult) element);
 		} else {
 			throw new InvalidElementException("Element '" + element + "' cannot be represented in the PDF. Not defined.");
 		}
@@ -66,6 +69,10 @@ public class FormResultTableFactory extends BaseElement {
 
 	private static PdfPCell createLine(CategoryResult category) {
 		return createElementLine(category, Theme.getCategoryFont(), Theme.CATEGORY_FONT_SIZE, CONTENT_WIDTH);
+	}
+
+	private static PdfPCell createLine(RepeatableGroupResult group) {
+		return createElementLine(group, Theme.getGroupFont(), Theme.GROUP_FONT_SIZE, CONTENT_WIDTH);
 	}
 
 	private static PdfPCell createLine(QuestionWithValueResult question) {
