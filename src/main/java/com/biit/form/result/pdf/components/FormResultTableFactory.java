@@ -75,7 +75,9 @@ public class FormResultTableFactory extends BaseElement {
 		Collections.sort(answers);
 
 		for (String answer : answers) {
-			table.addCell(createElementCell(ANSWER_TAB + answer, Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
+			if (answer != null) {
+				table.addCell(createElementCell(ANSWER_TAB + answer, Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
+			}
 		}
 	}
 
