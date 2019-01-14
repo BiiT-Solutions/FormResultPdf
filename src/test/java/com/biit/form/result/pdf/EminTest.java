@@ -29,9 +29,4 @@ public class EminTest {
 		FormAsPdf pdfDocument = new FormAsPdf(form);
 		pdfDocument.createFile(System.getProperty("java.io.tmpdir") + File.separator + "Emin.pdf");
 	}
-
-	public static FormResult fromFile(String path) throws IOException {
-		String jsonText = new String(Files.readAllBytes(Paths.get(path)));
-		return FormResult.fromJson(jsonText);
-	}
 }
