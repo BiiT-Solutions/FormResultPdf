@@ -16,7 +16,7 @@ import com.lowagie.text.DocumentException;
 
 @Test(groups = { "eminForm" })
 public class EminTest {
-	private final static String FORM_AS_JSON = "EminForm.json";
+	private final static String FORM_AS_JSON = "Emin Formulario On-line.json";
 
 	@Test
 	public void createEminPdf() throws IOException, URISyntaxException, EmptyPdfBodyException, DocumentException, InvalidElementException {
