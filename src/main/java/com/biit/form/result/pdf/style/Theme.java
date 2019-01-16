@@ -7,29 +7,21 @@ import com.lowagie.text.FontFactory;
 import com.lowagie.text.pdf.BaseFont;
 
 public class Theme {
-	public final static String LOGO_IMAGE = "fading-suns.png";
-	public final static String RIGHT_CORNER_IMAGE = "rightCorner.png";
-	public final static String LEFT_CORNER_IMAGE = "leftCorner.png";
-	public final static String MAIN_TITLE_IMAGE = "pageTitle.png";
+	public final static String FORM_FONT_NAME = "DejaVuSansCondensed-Bold.ttf";
+	public final static String CATEGORY_FONT_NAME = "DejaVuSans-Bold.ttf";
+	public final static String GROUP_FONT_NAME = "DejaVuSansCondensed-Bold.ttf";
 	public final static String QUESTION_FONT_NAME = "DejaVuSansCondensed.ttf";
-	public final static String LINE_FONT_ITALIC_NAME = "DejaVuSansCondensed-Oblique.ttf";
-	public final static String CATEGORY_FONT_NAME = "DejaVuSansCondensed-Oblique.ttf";
-	public final static String GROUP_FONT_NAME = "DejaVuSansCondensed-Oblique.ttf";
-	public final static String LINE_BOLD_FONT_NAME = "DejaVuSansCondensed-Bold.ttf";
-	public final static String FORM_FONT_NAME = "Roman Antique.ttf";
-	public final static String ANSWER_FONT_NAME = "ArchitectsDaughter.ttf";
+	public final static String ANSWER_FONT_NAME = "DejaVuSans-ExtraLight.ttf";
 
 	public final static int FORM_FONT_SIZE = 18;
 	public final static int CATEGORY_FONT_SIZE = 14;
-	public final static int GROUP_FONT_SIZE = 13;
+	public final static int GROUP_FONT_SIZE = 11;
 	public final static int QUESTION_FONT_SIZE = 11;
 	public final static int ANSWER_FONT_SIZE = 10;
 
 	public final static int DEFAULT_MARGIN = 3;
 
 	private static BaseFont footerFont;
-	private static BaseFont lineItalicFont;
-	private static BaseFont lineBoldFont;
 	private static BaseFont formFont;
 	private static BaseFont categoryFont;
 	private static BaseFont groupFont;
@@ -70,26 +62,10 @@ public class Theme {
 
 	public static BaseFont getAnswerFont() {
 		if (answerFont == null) {
-			Font font = FontFactory.getFont("/" + ANSWER_FONT_NAME, BaseFont.IDENTITY_H, BaseFont.EMBEDDED, 0.8f, Font.NORMAL, Color.BLACK);
+			Font font = FontFactory.getFont("/" + ANSWER_FONT_NAME, BaseFont.IDENTITY_H, BaseFont.EMBEDDED, 0.8f, Font.NORMAL, Color.DARK_GRAY);
 			answerFont = font.getBaseFont();
 		}
 		return answerFont;
-	}
-
-	public static BaseFont getLineItalicFont() {
-		if (lineItalicFont == null) {
-			Font font = FontFactory.getFont("/" + LINE_FONT_ITALIC_NAME, BaseFont.IDENTITY_H, BaseFont.EMBEDDED, 0.8f, Font.ITALIC, Color.BLACK);
-			lineItalicFont = font.getBaseFont();
-		}
-		return lineItalicFont;
-	}
-
-	public static BaseFont getLineFontBold() {
-		if (lineBoldFont == null) {
-			Font font = FontFactory.getFont("/" + LINE_BOLD_FONT_NAME, BaseFont.IDENTITY_H, BaseFont.EMBEDDED, 0.8f, Font.BOLD, Color.BLACK);
-			lineBoldFont = font.getBaseFont();
-		}
-		return lineBoldFont;
 	}
 
 	public static BaseFont getFooterFont() {

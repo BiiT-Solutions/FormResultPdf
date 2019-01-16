@@ -63,6 +63,7 @@ public class FormResultTableFactory extends BaseElement {
 	}
 
 	private static void addCell(PdfPTable table, RepeatableGroupResult group) {
+		table.addCell(createWhiteSeparator(10));
 		table.addCell(createElementCell(group, Theme.getGroupFont(), Theme.GROUP_FONT_SIZE, CONTENT_WIDTH));
 	}
 
@@ -86,7 +87,7 @@ public class FormResultTableFactory extends BaseElement {
 	}
 
 	protected static PdfPCell createElementCell(String text, BaseFont font, int fontSize, int maxColumnWidth) {
-		PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, Theme.getFormFont(), fontSize);
+		PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, font, fontSize);
 		// cell.setMinimumHeight(TITLE_HEIGHT);
 		cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
 		return cell;

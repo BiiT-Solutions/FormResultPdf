@@ -19,11 +19,11 @@ import com.lowagie.text.pdf.PdfWriter;
  * with page count and titles.
  */
 public class FormPageEvent extends PdfPageEventHelper {
-	private String header;
+	private String footer;
 	private PdfTemplate total;
 
-	public void setHeader(String header) {
-		this.header = header;
+	public void setFooter(String footer) {
+		this.footer = footer;
 	}
 
 	@Override
@@ -35,15 +35,13 @@ public class FormPageEvent extends PdfPageEventHelper {
 	public void onEndPage(PdfWriter writer, Document document) {
 		PdfPTable table = new PdfPTable(3);
 
-		//int pageNumber = writer.getPageNumber();
-
 		try {
 			table.setWidths(new int[] { 24, 24, 2 });
 			table.setTotalWidth(527);
 			table.setLockedWidth(true);
 			table.getDefaultCell().setFixedHeight(20);
 			table.getDefaultCell().setBorder(Rectangle.TOP);
-			table.addCell(header);
+			table.addCell(footer);
 			table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_RIGHT);
 			table.addCell(String.format("Page %d of", writer.getPageNumber()));
 			PdfPCell cell = new PdfPCell(Image.getInstance(total));

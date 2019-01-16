@@ -12,17 +12,23 @@ import com.lowagie.text.pdf.PdfWriter;
 
 public class FormAsPdf extends PdfDocument {
 	private FormResult formResult;
+	private String footer;
 
-	public FormAsPdf(FormResult formResult) {
+	public FormAsPdf(FormResult formResult, String footer) {
 		super();
 		this.formResult = formResult;
+		this.footer = footer;
 	}
 
 	@Override
 	protected void addEvent(PdfWriter writer) {
 		if (formResult != null) {
 			FormPageEvent formPageEvent = new FormPageEvent();
-			formPageEvent.setHeader(formResult.getLabel());
+			if (footer != null) {
+				formPageEvent.setFooter(footer);
+			} else {
+				formPageEvent.setFooter(formResult.getLabel());
+			}
 			writer.setPageEvent(formPageEvent);
 		}
 	}

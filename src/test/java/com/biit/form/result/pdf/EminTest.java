@@ -26,7 +26,7 @@ public class EminTest {
 		Assert.assertNotNull(form);
 
 		// Convert to pdf.
-		FormAsPdf pdfDocument = new FormAsPdf(form);
+		FormAsPdf pdfDocument = new FormAsPdf(form, "Jorge Hortelano");
 		pdfDocument.createFile(System.getProperty("java.io.tmpdir") + File.separator + "Emin.pdf");
 	}
 }
