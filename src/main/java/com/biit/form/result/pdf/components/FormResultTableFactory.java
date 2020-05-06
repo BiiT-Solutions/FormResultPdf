@@ -48,6 +48,8 @@ public class FormResultTableFactory extends BaseElement {
 			addCell(table, (QuestionWithValueResult) element);
 		} else if (element instanceof RepeatableGroupResult) {
 			addCell(table, (RepeatableGroupResult) element);
+		} else if (element == null) {
+			//Skip null elements. 
 		} else {
 			throw new InvalidElementException("Element '" + element + "' cannot be represented in the PDF. Not defined.");
 		}
