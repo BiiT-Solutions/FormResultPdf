@@ -1,0 +1,1644 @@
+{
+    "class": "com.biit.form.result.FormResult",
+    "comparationId": "cf5d6ed5-8010-415d-a9fb-04c87b58c7b1",
+    "creationTime": "May 5, 2020 2:56:40 PM",
+    "updateTime": "May 5, 2020 2:56:40 PM",
+    "name": "form",
+    "label": "LEC Cool Intake",
+    "updatedBy": 0,
+    "version": 1,
+    "organizationId": 18903,
+    "children": [
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "6ccfbe66-7498-4d0f-9c3d-1b86836f88d1",
+            "creationTime": "Apr 14, 2020 2:50:46 PM",
+            "updateTime": "May 5, 2020 11:28:38 AM",
+            "name": "PersonalDetails",
+            "label": "Persoonlijke gegevens",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "0acb6a16-0a33-473c-9a69-c5434fc96cdc",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 20, 2018 12:32:29 PM",
+                    "name": "Privacy1",
+                    "label": "Centrum voor Bewegen behandelen vertrouwelijke (persoons)gegevens betreffende cliënt, opdrachtgever en verwijzer die wij verkrijgen bij de uitvoering van onze diensten vertrouwelijk.",
+                    "children": [],
+                    "values": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "b3172a22-180b-4b12-831d-c2b199db3b95",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "Privacy2",
+                    "label": "Verkregen informatie wordt niet aan derden geopenbaard, behoudens voor zover wij ingevolge geldende wet- en regelgeving daartoe verplicht zijn of wij van cliënt, verwijzer of opdrachtgever daartoe toestemming hebben verkregen.",
+                    "children": [],
+                    "values": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "88e4e664-4f0f-4981-9dcf-ed74d7bdc5a3",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:55:08 AM",
+                    "name": "Privacy3",
+                    "label": "Wij leggen een geheimhoudingsplicht zoals voorgaand omschreven op aan al onze medewerkers en alle bij de uitvoering van diensten ingeschakelde derden. Opdrachtgever is gehouden tot geheimhouding van informatie die zij verkrijgt in het kader van de uitvoering van een of meer overeenkomsten met ons en waarvan zij het vertrouwelijke karakter moet begrijpen, behoudens indien en voor zover een wettelijk voorschrift opdrachtgever tot bekendmaking verplicht.",
+                    "children": [],
+                    "values": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "3f35c47d-db54-4088-8f88-54bfe0e8a653",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "user_code",
+                    "label": "Als u klant bent kunt u een code invoeren.",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "e3c1f6a5-e785-4c67-a3d7-3230de03f0b2",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "profile_first_name",
+                    "label": "Voornaam",
+                    "children": [],
+                    "values": [
+                        "Jorge"
+                    ],
+                    "answerLabels": [
+                        "Jorge"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "eed30ab5-b281-4f57-89c0-b8ec55c064b8",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "profile_initials",
+                    "label": "Initialen",
+                    "children": [],
+                    "values": [
+                        "J"
+                    ],
+                    "answerLabels": [
+                        "J"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "c5ad9f03-ef3b-4523-a159-22487327cf09",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "profile_last_name",
+                    "label": "Achternaam",
+                    "children": [],
+                    "values": [
+                        "Hortelano"
+                    ],
+                    "answerLabels": [
+                        "Hortelano"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "b0bd95c0-8295-42fd-8181-5ab776054882",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "May 5, 2020 11:28:38 AM",
+                    "name": "profile_gender",
+                    "label": "Geslacht",
+                    "children": [],
+                    "values": [
+                        "male"
+                    ],
+                    "answerLabels": [
+                        "Man"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "4c5b1b05-b64b-42c6-a61e-3a87853c71c0",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "profile_birthday",
+                    "label": "Geboortedatum",
+                    "children": [],
+                    "values": [
+                        "1982-09-10"
+                    ],
+                    "answerLabels": [
+                        "1982-09-10"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "ec11dc33-cd90-4dbe-8229-d77be7f23e15",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "person_address_street",
+                    "label": "Adres",
+                    "children": [],
+                    "values": [
+                        "Calle"
+                    ],
+                    "answerLabels": [
+                        "Calle"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "118da882-8a37-4ebe-b522-260498170496",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "person_address_postal",
+                    "label": "Postcode",
+                    "children": [],
+                    "values": [
+                        "0000AA"
+                    ],
+                    "answerLabels": [
+                        "0000AA"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "b3311ca6-aa73-42e6-9644-f8dc29ea5327",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "person_address_city",
+                    "label": "Woonplaats",
+                    "children": [],
+                    "values": [
+                        "Valencia"
+                    ],
+                    "answerLabels": [
+                        "Valencia"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "ee45f033-0a3b-4455-9bdd-01d90fab3e4d",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "profile_phone",
+                    "label": "telefoonnummer",
+                    "children": [],
+                    "values": [
+                        "+34690168384"
+                    ],
+                    "answerLabels": [
+                        "+34690168384"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "33cffd66-35bd-46c7-9290-f0ef62adc29c",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "profile_email_address",
+                    "label": "eMail",
+                    "children": [],
+                    "values": [
+                        "jhortelano@biit-solutions.com"
+                    ],
+                    "answerLabels": [
+                        "jhortelano@biit-solutions.com"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "834f218f-eca7-4ebe-986d-6c07634e490a",
+                    "creationTime": "Apr 14, 2020 2:50:46 PM",
+                    "updateTime": "Jul 19, 2018 11:46:22 AM",
+                    "name": "user_comparation_id",
+                    "label": "<userId>",
+                    "values": [
+                        null
+                    ],
+                    "fieldName": "userId"
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "263d71ac-dbcf-40ea-ba76-60035a9e5c38",
+            "creationTime": "Dec 18, 2019 3:35:05 PM",
+            "updateTime": "May 5, 2020 11:28:38 AM",
+            "name": "goal",
+            "label": "Je doelstelling",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "1aaab649-1178-4c16-90ec-d53180b260dd",
+                    "creationTime": "Dec 18, 2019 3:35:48 PM",
+                    "updateTime": "May 5, 2020 11:28:38 AM",
+                    "name": "life_style_goal",
+                    "label": "Welk doel heb jij jezelf gesteld m.b.t. je leefstijl?",
+                    "children": [],
+                    "values": [
+                        "health"
+                    ],
+                    "answerLabels": [
+                        "Ik wil een gezonder eetpatroon aanleren"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "b47b07cd-3a19-46c0-8f9d-196a5f160205",
+                    "creationTime": "Jan 13, 2020 3:24:26 PM",
+                    "updateTime": "Apr 14, 2020 3:00:13 PM",
+                    "name": "other",
+                    "label": "Overig. Namelijk:",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "0f878a07-92a3-422d-9020-1a451cbf411d",
+                    "creationTime": "Dec 18, 2019 3:44:57 PM",
+                    "updateTime": "Jan 21, 2020 9:57:03 AM",
+                    "name": "most_important_element",
+                    "label": "Wat is het belangrijkste element in deze doelstelling?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "c5c3820a-5a7e-4944-b65b-ef6c0283af09",
+                    "creationTime": "Dec 18, 2019 3:47:59 PM",
+                    "updateTime": "Apr 14, 2020 2:56:07 PM",
+                    "name": "time_goal_reference",
+                    "label": "Wanneer wil je je doelstelling bereikt hebben?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "db869d25-bda6-4021-81c1-cfd48fae17a6",
+                    "creationTime": "Dec 18, 2019 3:48:33 PM",
+                    "updateTime": "Jan 21, 2020 9:57:05 AM",
+                    "name": "difference_working_goal",
+                    "label": "Wat is er anders of wat doe je anders als je je doel bereikt hebt?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.RepeatableGroupResult",
+                    "comparationId": "bcccfa77-164e-4986-91e5-c08106bc7790",
+                    "creationTime": "Dec 18, 2019 3:37:50 PM",
+                    "updateTime": "May 5, 2020 11:28:38 AM",
+                    "name": "declarations",
+                    "label": "In hoeverre gelden onderstaande stellingen voor jou? Het gaat hierbij om de laatste twee weken. Je kunt dit aangeven door aan te kruisen in hoeverre je het met de stelling eens bent.",
+                    "repeatable": false,
+                    "children": [
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "9396b67a-f25d-4305-94fe-3136c233f7cb",
+                            "creationTime": "Dec 18, 2019 3:38:28 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "lazy_start",
+                            "label": "Ik zie in dat ik moeite moet doen om met mijn doelstelling aan de slag te gaan",
+                            "children": [],
+                            "values": [
+                                "completly_desagree"
+                            ],
+                            "answerLabels": [
+                                "Helemaal niet mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "5fbb8bb4-117e-4ade-a0d5-268c703aead2",
+                            "creationTime": "Dec 18, 2019 3:50:42 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "family_requirement",
+                            "label": "Ik ga aan de slag met mijn doelstelling omdat mijn vrienden/familie/partner zeggen dat ik dat moet doen",
+                            "children": [],
+                            "values": [
+                                "completly_agree"
+                            ],
+                            "answerLabels": [
+                                "Helemaal mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "04d7f679-dea0-4a96-b09a-769e4dbd7db0",
+                            "creationTime": "Dec 18, 2019 3:58:08 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "feels_bad",
+                            "label": "Ik voel me schuldig als ik niet aan de slag ga met mijn doelstelling",
+                            "children": [],
+                            "values": [
+                                "completly_desagree"
+                            ],
+                            "answerLabels": [
+                                "Helemaal niet mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "367c59ea-8b08-44c7-93b7-c0f96f71be26",
+                            "creationTime": "Dec 18, 2019 4:04:27 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "work_on_objective",
+                            "label": "Ik ga aan de slag met mijn doelstelling omdat ik het belangrijk vind",
+                            "children": [],
+                            "values": [
+                                "completly_desagree"
+                            ],
+                            "answerLabels": [
+                                "Helemaal niet mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "b6f60f18-0d0c-4574-8c5a-fb01afa8a232",
+                            "creationTime": "Dec 18, 2019 4:12:21 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "identity_selfwork",
+                            "label": "Ik ga zelf aan de slag met mijn doelstelling omdat ik het beschouw als onderdeel van mijn identiteit",
+                            "children": [],
+                            "values": [
+                                "completly_desagree"
+                            ],
+                            "answerLabels": [
+                                "Helemaal niet mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "16fced57-8eb3-4e67-882f-429a43f6a6e2",
+                            "creationTime": "Dec 18, 2019 4:16:55 PM",
+                            "updateTime": "Apr 15, 2020 10:22:07 AM",
+                            "name": "comments",
+                            "label": "Ruimte voor opmerkingen",
+                            "children": [],
+                            "values": [
+                                null
+                            ],
+                            "answerLabels": [
+                                null
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "f442ec13-64ac-4af6-abc8-0981da1c9cf1",
+            "creationTime": "Dec 18, 2019 4:19:56 PM",
+            "updateTime": "May 5, 2020 11:30:05 AM",
+            "name": "feelings",
+            "label": "Je gevoel",
+            "children": [
+                {
+                    "class": "com.biit.form.result.RepeatableGroupResult",
+                    "comparationId": "3e5ae926-2278-422b-af62-faf6d586a7af",
+                    "creationTime": "Dec 18, 2019 4:22:12 PM",
+                    "updateTime": "May 5, 2020 11:28:38 AM",
+                    "name": "declarations",
+                    "label": "In hoeverre gelden onderstaande stellingen voor jou? Het gaat hierbij om de laatste twee weken. Je kunt dit aangeven door aan te kruisen in hoeverre je het met de stelling eens bent.",
+                    "repeatable": false,
+                    "children": [
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "5b24be82-deb9-4e67-92ba-8460474387f4",
+                            "creationTime": "Dec 18, 2019 4:26:19 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "self_care",
+                            "label": "Hoe goed zit jij in je vel?",
+                            "children": [],
+                            "values": [
+                                "completly_bad"
+                            ],
+                            "answerLabels": [
+                                "Helemaal niet goed"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "c2c71362-642c-4a10-86bb-e01d3c2fa186",
+                            "creationTime": "Dec 18, 2019 4:33:03 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "how_much_you_selfcare",
+                            "label": "Hoe goed zorg jij voor jezelf?",
+                            "children": [],
+                            "values": [
+                                "excelent"
+                            ],
+                            "answerLabels": [
+                                "Heel goed"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "3f41dabd-5964-4b71-b947-8c529f5ec145",
+                            "creationTime": "Dec 18, 2019 4:38:00 PM",
+                            "updateTime": "May 5, 2020 11:28:38 AM",
+                            "name": "your_health_status",
+                            "label": "Hoe goed is jouw gezondheid op dit moment – als je het zelf zou inschatten?",
+                            "children": [],
+                            "values": [
+                                "excelent"
+                            ],
+                            "answerLabels": [
+                                "Heel goed"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "8d0472b5-6681-45a4-a0ff-6fc05433c0dc",
+                    "creationTime": "Dec 18, 2019 4:44:22 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "last_month_woke_check",
+                    "label": "Hoe fit werd je in het algemeen wakker de afgelopen maand? ",
+                    "children": [],
+                    "values": [
+                        "really_fit"
+                    ],
+                    "answerLabels": [
+                        "Heel fit"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "1d374e70-7ac2-4108-b087-cde2efbe5ede",
+                    "creationTime": "Dec 18, 2019 4:59:12 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "how_fit_were_you_this_month",
+                    "label": "Hoe fit voel je je in het algemeen overdag als je kijkt naar de afgelopen maand? ",
+                    "children": [],
+                    "values": [
+                        "fit"
+                    ],
+                    "answerLabels": [
+                        "Fit"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "6c6f71e3-48ed-4a9d-a235-5033ac415b10",
+                    "creationTime": "Dec 18, 2019 5:18:56 PM",
+                    "updateTime": "May 5, 2020 11:30:05 AM",
+                    "name": "stress_influence",
+                    "label": "In hoeverre heeft stress invloed op jouw functioneren?",
+                    "children": [],
+                    "values": [
+                        "neutral"
+                    ],
+                    "answerLabels": [
+                        "Neutraal"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "c2920bfc-41c9-42ef-a610-84df93e0e8ec",
+                    "creationTime": "Dec 18, 2019 5:24:49 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "been_treated",
+                    "label": "Ben je op dit moment onder behandeling voor een leefstijlgerelateerde vraag (voeding, beweging, slaap, ontspanning/ stress)?",
+                    "children": [],
+                    "values": [
+                        "no"
+                    ],
+                    "answerLabels": [
+                        "Nee"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "9f2bd77a-43e5-4515-85f0-ba0d65b63ac2",
+                    "creationTime": "Dec 18, 2019 5:26:45 PM",
+                    "updateTime": "Apr 14, 2020 3:22:12 PM",
+                    "name": "explanation",
+                    "label": "Toelichting",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "7dfc3af6-c8f2-490f-a8db-dcc7632cb7ab",
+                    "creationTime": "Dec 18, 2019 5:28:31 PM",
+                    "updateTime": "Apr 14, 2020 3:22:26 PM",
+                    "name": "comments",
+                    "label": "Ruimte voor opmerkingen",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "80a767ac-9ba4-46cf-a70c-d8e9e84ad2fc",
+            "creationTime": "Dec 19, 2019 9:32:25 AM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "life_style_movement",
+            "label": " Je leefstijl - BEWEGING",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "555d1578-766c-4d03-ae37-15462e0443db",
+                    "creationTime": "Jan 13, 2020 3:30:17 PM",
+                    "updateTime": "May 5, 2020 11:14:54 AM",
+                    "name": "hoursSitingLeast",
+                    "label": "Hoeveel uren breng je zittend door  op de dag in de week dat je het minste zit ?",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "66e96113-3142-4ab0-a27b-d380640b4cad",
+                    "creationTime": "Jan 13, 2020 4:24:46 PM",
+                    "updateTime": "Apr 14, 2020 3:10:18 PM",
+                    "name": "hoursSitingMore",
+                    "label": "Hoeveel uren breng je zittend door op de dag in de week dat je het meest zit?",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "70d60bd6-a45f-47e2-8693-2d490d73eb35",
+                    "creationTime": "Jan 13, 2020 3:31:34 PM",
+                    "updateTime": "Jan 21, 2020 4:21:58 PM",
+                    "name": "minutesYourExercise",
+                    "label": "Hoeveel minuten beweeg je gemiddeld per dag matig intensief? ",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "c194ebaf-d0a3-4c93-aad6-d7428cabd7f4",
+                    "creationTime": "Jan 13, 2020 3:39:49 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "muscleStrenthTraining",
+                    "label": "Hoe vaak in de week doe je aan spierversterkende training zoals krachttraining of een soortgelijke training? ",
+                    "children": [],
+                    "values": [
+                        "3"
+                    ],
+                    "answerLabels": [
+                        "3"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "b60dbc42-a9b5-4d26-8c56-482f5925866e",
+                    "creationTime": "Jan 13, 2020 3:44:17 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "howManyTImeAweekExercise",
+                    "label": "Hoe vaak in de week sport je?",
+                    "children": [],
+                    "values": [
+                        "6"
+                    ],
+                    "answerLabels": [
+                        "6"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "7d363276-3658-45ee-a951-f705bab4d8ac",
+                    "creationTime": "Jan 13, 2020 3:49:27 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "intensityLevel",
+                    "label": "Hoe intensief is die mate van sporten voor jou?",
+                    "children": [],
+                    "values": [
+                        4
+                    ],
+                    "answerLabels": [
+                        4
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "54bc2b5b-0133-4231-8344-9f80440bcdf6",
+                    "creationTime": "Dec 19, 2019 9:38:12 AM",
+                    "updateTime": "Jan 14, 2020 9:38:16 AM",
+                    "name": "time_you_go_walking",
+                    "label": "Hoeveel keren op een dag ga je minimaal een kwartier naar buiten?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "5e34548f-27c1-45ec-89af-560849c6d656",
+                    "creationTime": "Dec 19, 2019 9:39:44 AM",
+                    "updateTime": "Jan 14, 2020 9:38:17 AM",
+                    "name": "sport_you_would_like_to_do",
+                    "label": "Als je geen enkele beperking zou kennen (zowel fysiek, mentaal als financieel), welke sport zou je dan graag uitoefenen?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "56db27ca-7f90-4fa1-a670-938da8381666",
+                    "creationTime": "Dec 19, 2019 9:40:37 AM",
+                    "updateTime": "Apr 14, 2020 3:00:31 PM",
+                    "name": "comments",
+                    "label": "Ruimte voor opmerkingen",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "c51ea653-5dec-457d-882a-87b7a990ecde",
+            "creationTime": "Dec 19, 2019 9:40:50 AM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "your_style_nutrition",
+            "label": "Je leefstijl - VOEDING",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "0ba81fce-2cc3-415f-9052-e5fbe2e5ca05",
+                    "creationTime": "Dec 19, 2019 9:46:08 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "estimate_your_healthy_eating",
+                    "label": "Hoe gezond schat je je eigen eetpatroon op dit moment in? (maaltijden en extra’s)",
+                    "children": [],
+                    "values": [
+                        "neutral"
+                    ],
+                    "answerLabels": [
+                        "Neutraal"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "7643eaf3-2256-48e8-834b-933b02544145",
+                    "creationTime": "Dec 19, 2019 9:50:09 AM",
+                    "updateTime": "May 5, 2020 11:22:31 AM",
+                    "name": "attention_what_you_eat",
+                    "label": "Met hoeveel aandacht eet je meestal?",
+                    "children": [],
+                    "values": [
+                        "good_nutrition"
+                    ],
+                    "answerLabels": [
+                        "Niet erg veel aandacht "
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "2ebc30a6-0b07-4c59-8b02-9dcc3c5d3d15",
+                    "creationTime": "Dec 19, 2019 10:02:33 AM",
+                    "updateTime": "May 5, 2020 11:22:07 AM",
+                    "name": "breackfast_time",
+                    "label": "Hoe vaak per week neem je een ontbijt ?",
+                    "children": [],
+                    "values": [
+                        "4"
+                    ],
+                    "answerLabels": [
+                        "4"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "22cfb6fe-143a-45f9-bf04-eb318b4d6cea",
+                    "creationTime": "Dec 19, 2019 10:04:27 AM",
+                    "updateTime": "Jan 21, 2020 10:22:32 AM",
+                    "name": "veggies_a_day",
+                    "label": "Hoeveel opscheplepels groente eet je op een dag? ",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "fcbc666c-e0dd-4dd6-97c5-8d965bc9ff06",
+                    "creationTime": "Dec 19, 2019 10:05:18 AM",
+                    "updateTime": "Jan 21, 2020 10:22:33 AM",
+                    "name": "fruits_a_day",
+                    "label": "En hoeveel stuks fruit eet je op een dag?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "85645abe-c2ae-4c1b-9ef7-c575b825edf2",
+                    "creationTime": "Dec 19, 2019 10:05:52 AM",
+                    "updateTime": "Jan 21, 2020 10:22:34 AM",
+                    "name": "water_a_day",
+                    "label": "Hoeveel water/vocht drink je op een dag?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "eaf70f7b-8bc5-4e52-9cee-dce25fb26ff0",
+                    "creationTime": "Dec 19, 2019 10:06:18 AM",
+                    "updateTime": "Jan 21, 2020 10:22:38 AM",
+                    "name": "suggar_a_day",
+                    "label": "Hoeveel eenheden snoep/koek/snacks/suikerhoudende drank neem je op een dag?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "00821151-d840-4cfa-aa3f-db3ec55a902d",
+                    "creationTime": "Dec 19, 2019 10:06:41 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "sweat_during_weekdays",
+                    "label": "En op hoeveel dagen van de week snoep je NIET?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "96f50c8b-97dc-4849-933d-8e3102be13e8",
+                    "creationTime": "Dec 19, 2019 10:08:24 AM",
+                    "updateTime": "Jan 21, 2020 10:22:24 AM",
+                    "name": "diet_attempts",
+                    "label": "Heb je eerder lijn pogingen gedaan of diëten gevolgd? En wat heeft je dit opgeleverd / wat neem je hieruit mee?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "9466325e-02c3-44e2-9459-51d2f6bc2ca0",
+                    "creationTime": "Dec 19, 2019 10:09:36 AM",
+                    "updateTime": "Apr 14, 2020 3:00:37 PM",
+                    "name": "comments",
+                    "label": "Ruimte voor opmerkingen",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "6bd745ea-1679-4ca8-bff2-cc80881562fd",
+            "creationTime": "Dec 19, 2019 10:10:20 AM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "life_style_smoking_alcohol",
+            "label": "Je leefstijl - ROKEN & ALCOHOL",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "ff9cf123-3f1b-410a-9ab4-092471c67532",
+                    "creationTime": "Dec 19, 2019 10:12:13 AM",
+                    "updateTime": "May 5, 2020 11:26:22 AM",
+                    "name": "how_much_cigarettes",
+                    "label": "Hoeveel eenheden rook je gemiddeld per dag? ",
+                    "children": [],
+                    "values": [
+                        "0"
+                    ],
+                    "answerLabels": [
+                        "0"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "374abed1-b311-46cf-ad59-2de82a3bd569",
+                    "creationTime": "Dec 19, 2019 10:14:20 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "days_you_smoke",
+                    "label": "Op hoeveel dagen van de week rook je?",
+                    "children": [],
+                    "values": [
+                        "6"
+                    ],
+                    "answerLabels": [
+                        "6"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "012f6fe4-edab-452c-8c0d-f11ef9527bfe",
+                    "creationTime": "Dec 19, 2019 10:15:31 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "alcohol_you_drink_daily",
+                    "label": "Hoeveel alcohol drink je op de dagen dat je drinkt? (gemiddeld)",
+                    "children": [],
+                    "values": [
+                        "2"
+                    ],
+                    "answerLabels": [
+                        "2"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "34357c0c-6dab-4184-96f6-46b869e4c58d",
+                    "creationTime": "Dec 19, 2019 10:16:26 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "days_you_drink",
+                    "label": "Hoeveel dagen van de week drink je alcoholhoudende dranken?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "d52db0de-e127-4bb2-b5a7-9d1a9b1f3a99",
+                    "creationTime": "Dec 19, 2019 10:17:27 AM",
+                    "updateTime": "Apr 14, 2020 3:00:41 PM",
+                    "name": "comments",
+                    "label": "Ruimte voor opmerkingen",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "30b22b21-31b6-4996-99d9-10b0bf254cb5",
+            "creationTime": "Dec 19, 2019 10:19:24 AM",
+            "updateTime": "May 5, 2020 2:53:49 PM",
+            "name": "body_values",
+            "label": "Jouw lichaamswaarden ",
+            "children": [
+                {
+                    "class": "com.biit.form.result.RepeatableGroupResult",
+                    "comparationId": "5bd4679f-f906-44e0-bbf4-bb6ab9a4c3e4",
+                    "creationTime": "Jan 21, 2020 10:23:29 AM",
+                    "updateTime": "May 5, 2020 2:53:49 PM",
+                    "name": "measurement",
+                    "label": "Deze metingen worden pas bij de persoonlijke afspraak gedaan en hoeven dus niet van te voren ingevuld te worden*",
+                    "repeatable": false,
+                    "children": [
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "3ba3e84d-bfd9-43b3-b93e-665f8411af12",
+                            "creationTime": "Jan 21, 2020 10:24:13 AM",
+                            "updateTime": "Jan 21, 2020 10:24:14 AM",
+                            "name": "current_weight",
+                            "label": "Hoeveel weeg jij op dit moment? ",
+                            "children": [],
+                            "values": [
+                                null
+                            ],
+                            "answerLabels": [
+                                null
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "0210ddc6-b564-45b4-b98b-186ecabbd09e",
+                            "creationTime": "Jan 21, 2020 10:24:20 AM",
+                            "updateTime": "May 5, 2020 2:53:49 PM",
+                            "name": "height",
+                            "label": "Hoe lang ben je op dit moment? ",
+                            "children": [],
+                            "values": [
+                                null
+                            ],
+                            "answerLabels": [
+                                null
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "2a1bbb49-64c9-47c0-a250-1f93398dd36b",
+                            "creationTime": "Jan 21, 2020 10:24:26 AM",
+                            "updateTime": "May 5, 2020 2:53:39 PM",
+                            "name": "waist_circunference",
+                            "label": "Wat is je middelomtrek op dit moment? (in cm)",
+                            "children": [],
+                            "values": [
+                                null
+                            ],
+                            "answerLabels": [
+                                null
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "b5bb5f76-6f1e-4163-b027-e64dd0bbe2b8",
+            "creationTime": "Dec 19, 2019 10:48:32 AM",
+            "updateTime": "May 5, 2020 2:53:51 PM",
+            "name": "mental_health",
+            "label": "Mentale gezondheid",
+            "children": [
+                {
+                    "class": "com.biit.form.result.RepeatableGroupResult",
+                    "comparationId": "876875d4-1df0-424f-adeb-b2e65c10ba63",
+                    "creationTime": "Dec 19, 2019 10:49:41 AM",
+                    "updateTime": "May 5, 2020 11:31:05 AM",
+                    "name": "statements",
+                    "label": "verre gelden onderstaande stellingen voor jou? Je kunt dit aangeven door aan te kruisen in hoeverre je het met de stelling eens bent.",
+                    "repeatable": false,
+                    "children": [
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "1c5c616f-3680-46ad-ab1a-2e4f75cac156",
+                            "creationTime": "Dec 19, 2019 10:49:51 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "cant_solve_problems",
+                            "label": "Sommige problemen die ik heb, kan ik echt niet zelf oplossen",
+                            "children": [],
+                            "values": [
+                                "neutral"
+                            ],
+                            "answerLabels": [
+                                "Neutraal"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "fce256f3-27b4-49e1-9d7a-e4c9eeb0186c",
+                            "creationTime": "Dec 19, 2019 10:49:51 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "control_of_life",
+                            "label": "Ik heb heel weinig controle over wat er gebeurt in mijn leven (werk en/of privé): de dingen overkomen mij",
+                            "children": [],
+                            "values": [
+                                "neutral"
+                            ],
+                            "answerLabels": [
+                                "Neutraal"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "544cd540-422b-40ea-a1ae-c40ffe95b89c",
+                            "creationTime": "Dec 19, 2019 10:49:52 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "feel_helpless",
+                            "label": "Ik voel me vaak hulpeloos in relatie tot de problemen die ik in mijn leven (werk en/of privé) tegenkom",
+                            "children": [],
+                            "values": [
+                                "disagree"
+                            ],
+                            "answerLabels": [
+                                "Niet mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "538e7bdb-0b94-457f-873a-dc5f9c9dff1a",
+                            "creationTime": "Dec 19, 2019 10:49:53 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "can_change_things",
+                            "label": "Ik kan veel veranderen aan de belangrijke dingen in mijn leven (werk en/of privé)",
+                            "children": [],
+                            "values": [
+                                "agree"
+                            ],
+                            "answerLabels": [
+                                "Mee eens"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "82fbf1f1-a3b3-444e-83b3-e2e21276434c",
+                            "creationTime": "Dec 19, 2019 10:59:40 AM",
+                            "updateTime": "Apr 16, 2020 1:06:49 PM",
+                            "name": "comments",
+                            "label": "Ruimte voor opmerkingen",
+                            "children": [],
+                            "values": [
+                                null
+                            ],
+                            "answerLabels": [
+                                null
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "7edd87b7-04fe-4d75-af6d-c942425b6912",
+            "creationTime": "Dec 19, 2019 11:01:09 AM",
+            "updateTime": "May 5, 2020 2:52:57 PM",
+            "name": "sleep_quality",
+            "label": "Je slaapkwaliteit",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "661384f8-ff1d-4cef-bd2e-98c3ac7dfc28",
+                    "creationTime": "Dec 19, 2019 11:02:15 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "hours_sleep",
+                    "label": "Als je kijkt naar de afgelopen maand: hoeveel uur heb je dan gemiddeld per 24 uur daadwerkelijk geslapen? ",
+                    "children": [],
+                    "values": [
+                        "lessthan8"
+                    ],
+                    "answerLabels": [
+                        "Minder dan 8"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "be139ccd-5d27-433e-8b94-08bf309577e1",
+                    "creationTime": "Dec 19, 2019 11:02:35 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "time_spent_in_bed",
+                    "label": "En hoeveel uur heb je in bed doorgebracht? ",
+                    "children": [],
+                    "values": [
+                        "answer2"
+                    ],
+                    "answerLabels": [
+                        "Minder dan 8"
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.RepeatableGroupResult",
+                    "comparationId": "0e5b9f39-0861-4ee2-bafe-d32167640597",
+                    "creationTime": "Jan 13, 2020 5:03:21 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "problemsBecauseofyou",
+                    "label": "Hoe vaak heb je de afgelopen maand problemen gehad omdat je?",
+                    "repeatable": false,
+                    "children": [
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "b0a6165d-08cc-4c39-94c7-a0d243e3ac5b",
+                            "creationTime": "Jan 13, 2020 5:04:05 PM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "fall_sleep_time",
+                            "label": "Niet binnen 30 minuten in slaap kunt vallen",
+                            "children": [],
+                            "values": [
+                                "never"
+                            ],
+                            "answerLabels": [
+                                "Nooit"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "bedb0f8a-202e-4da7-8fe4-153c4b9b1ae4",
+                            "creationTime": "Jan 13, 2020 5:08:41 PM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "wake_up_middle_night",
+                            "label": "Midden in de nacht of vroeg in de morgen wakker wordt",
+                            "children": [],
+                            "values": [
+                                "rarely"
+                            ],
+                            "answerLabels": [
+                                "Zelden"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "388a4e7f-10e4-44c4-bb66-8b1113c94028",
+                            "creationTime": "Jan 13, 2020 5:10:47 PM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "pills_taken",
+                            "label": "Hoe vaak heb je slaapmiddelen genomen afgelopen maand?  ",
+                            "children": [],
+                            "values": [
+                                "rarelly"
+                            ],
+                            "answerLabels": [
+                                "Zelden"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "dbb2e00c-61de-44fb-ae49-d4d72fff5266",
+                            "creationTime": "Jan 13, 2020 5:10:54 PM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "sleepquality",
+                            "label": "Geef uw kwaliteit van slaap een cijfer",
+                            "children": [],
+                            "values": [
+                                4
+                            ],
+                            "answerLabels": [
+                                4
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "5da63918-96f7-489a-bc32-7899f21d29fd",
+                            "creationTime": "Jan 13, 2020 5:12:20 PM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "complainsSleeping",
+                            "label": "Ervaart u klachten of belemmeringen gedurende de dag mbt uw slaap?",
+                            "children": [],
+                            "values": [
+                                5
+                            ],
+                            "answerLabels": [
+                                5
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "77c71738-8898-4a48-bf15-6245b8026d98",
+                    "creationTime": "Jan 13, 2020 5:13:50 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "sleepqualitylasmonth",
+                    "label": "Hoe zou je je slaapkwaliteit van de afgelopen maand gemiddeld inschatten?",
+                    "children": [],
+                    "values": [
+                        "verybad"
+                    ],
+                    "answerLabels": [
+                        "Heel slecht"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "a991608a-a8e1-4065-b9f5-fd2bcecdcfb2",
+            "creationTime": "Dec 19, 2019 11:28:33 AM",
+            "updateTime": "May 5, 2020 2:53:32 PM",
+            "name": "stress_during_month",
+            "label": "Je stress-gevoel",
+            "children": [
+                {
+                    "class": "com.biit.form.result.RepeatableGroupResult",
+                    "comparationId": "d2841801-327f-4442-845b-be89295ab844",
+                    "creationTime": "Dec 19, 2019 11:29:13 AM",
+                    "updateTime": "May 5, 2020 2:53:32 PM",
+                    "name": "Explanation_tittle",
+                    "label": "De vragen in deze lijst peilen naar jouw gevoelens en gedachten van de laatste maand. Bij elke vraag moet je aangeven hoe vaak je een bepaalde gedachte of een bepaald gevoel had. Hoewel sommige van de vragen op elkaar gelijken, zijn er verschillen en moet je elke vraag apart beschouwen. De beste methode is elke vraag tamelijk snel te beantwoorden. Probeer dus niet op te tellen hoeveel keren dat je je op een bepaalde manier voelde, maar duid wel de antwoordmogelijkheid aan die een vrij goede schatting ervan lijkt. ",
+                    "repeatable": false,
+                    "children": [
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "6e781e61-0c43-489f-abcc-25091e1ed7c0",
+                            "creationTime": "Dec 19, 2019 11:29:58 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "upset",
+                            "label": "Hoe vaak ben je de afgelopen maand overstuur geweest door iets dat onverwacht gebeurde?",
+                            "children": [],
+                            "values": [
+                                "sometimes"
+                            ],
+                            "answerLabels": [
+                                "Soms"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "0915e99a-f851-47eb-a738-05b057d5f67b",
+                            "creationTime": "Dec 19, 2019 11:29:58 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "unable_to_control",
+                            "label": "Hoe vaak heb je de afgelopen maand gevoeld dat je niet in staat was de belangrijke dingen in jouw leven te controleren?",
+                            "children": [],
+                            "values": [
+                                "usually"
+                            ],
+                            "answerLabels": [
+                                "Bijna nooit"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "f639948c-9f47-4895-85e8-3d82aaf0274e",
+                            "creationTime": "Dec 19, 2019 11:30:00 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "nervous_feelings",
+                            "label": "Hoe vaak heb je je in de afgelopen maand zenuwachtig en gestresst gevoeld?",
+                            "children": [],
+                            "values": [
+                                "normally"
+                            ],
+                            "answerLabels": [
+                                "Vrij vaak"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "62ab64ad-ad5f-4d53-a1ab-55383a2642f7",
+                            "creationTime": "Dec 19, 2019 11:30:02 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "doing_well",
+                            "label": "Hoe vaak heb je de afgelopen maand gevoeld dat het goed met je ging?",
+                            "children": [],
+                            "values": [
+                                "normally"
+                            ],
+                            "answerLabels": [
+                                "Vrij vaak"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "f0a6f28a-243c-4784-be34-807cb4600ac4",
+                            "creationTime": "Dec 19, 2019 11:30:04 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "cant_deal_problems",
+                            "label": "Hoe vaak vond je de afgelopen maand dat je het hoofd niet kon bieden aan al de dingen die je moest doen?",
+                            "children": [],
+                            "values": [
+                                "sometimes"
+                            ],
+                            "answerLabels": [
+                                "Soms"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "135a1a7f-ea30-4839-a79a-2e41aa5feb18",
+                            "creationTime": "Dec 19, 2019 11:30:06 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "control_annoyances",
+                            "label": "Hoe vaak kon je de afgelopen maand ergernissen in jouw leven onder controle houden?",
+                            "children": [],
+                            "values": [
+                                "sometimes"
+                            ],
+                            "answerLabels": [
+                                "Soms"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "49e1b9ab-12c2-4bdf-a816-e3260b055e06",
+                            "creationTime": "Dec 19, 2019 11:30:07 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "things_under_control",
+                            "label": "Hoe vaak had je de afgelopen maand het gevoel dat je de dingen onder controle had?",
+                            "children": [],
+                            "values": [
+                                "usually"
+                            ],
+                            "answerLabels": [
+                                "Bijna nooit"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "1ae97b8e-6201-495e-8a25-4fed3f02a3e3",
+                            "creationTime": "Dec 19, 2019 11:30:08 AM",
+                            "updateTime": "May 5, 2020 11:28:39 AM",
+                            "name": "get_angry",
+                            "label": "Hoe vaak ben je de afgelopen maand boos geworden door zaken die gebeurden en waar je zelf niets aan kon doen?",
+                            "children": [],
+                            "values": [
+                                "never"
+                            ],
+                            "answerLabels": [
+                                "Nooit"
+                            ]
+                        },
+                        {
+                            "class": "com.biit.form.result.QuestionWithValueResult",
+                            "comparationId": "36eadb08-aa52-4249-9935-ce856710da87",
+                            "creationTime": "Dec 19, 2019 11:30:09 AM",
+                            "updateTime": "May 5, 2020 2:53:32 PM",
+                            "name": "problems_accumulated",
+                            "label": "Hoe vaak heb je de afgelopen maand gevoeld dat problemen zich zo sterk opstapelden, dat je ze niet meer te boven kon komen?",
+                            "children": [],
+                            "values": [
+                                "never"
+                            ],
+                            "answerLabels": [
+                                "Nooit"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "9fd27553-9276-42b4-8409-a81e2cbdb98f",
+            "creationTime": "Dec 19, 2019 12:53:54 PM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "mobility",
+            "label": "MOBILITEIT",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "b9722d79-4c49-41c3-b5ce-7c6b13ae3472",
+                    "creationTime": "Dec 19, 2019 12:54:41 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "movement",
+                    "label": "Mobiliteit",
+                    "children": [],
+                    "values": [
+                        "moderate_walking_difficulties"
+                    ],
+                    "answerLabels": [
+                        "Ik heb matige problemen met lopen"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "2504324c-746b-4148-91e5-60cdf6fcd026",
+            "creationTime": "Dec 19, 2019 1:12:38 PM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "self_care",
+            "label": "ZELFZORG",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "34243997-6ca6-48de-b0e1-6484c0512a27",
+                    "creationTime": "Dec 19, 2019 1:12:55 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "selfCare",
+                    "label": "Zelfzorg",
+                    "children": [],
+                    "values": [
+                        "little_problems_dressing"
+                    ],
+                    "answerLabels": [
+                        "Ik heb een beetje problemen met mijzelf wassen of aankleden"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "0820efb6-d4b2-4fde-91c5-7217fee823a8",
+            "creationTime": "Dec 19, 2019 1:17:00 PM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "dayli_activities",
+            "label": "DAGELIJKSE ACTIITEITEN ",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "aeabf384-95be-42af-b6d7-03c0a9ccaefb",
+                    "creationTime": "Dec 19, 2019 1:17:47 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "dayActivities",
+                    "label": "Dagelijkse actiiteiten ",
+                    "children": [],
+                    "values": [
+                        "no_problems_dayli_activities"
+                    ],
+                    "answerLabels": [
+                        "Ik heb geen problemen met mijn dagelijkse activiteiten"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "bbe9b848-20de-4785-86ed-04af6cec877f",
+            "creationTime": "Jan 14, 2020 9:50:54 AM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "pain_disease",
+            "label": "PIJN/ONGEMAK",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "97984921-9f48-43e3-ba09-24a93c127db1",
+                    "creationTime": "Jan 14, 2020 9:51:21 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "pain_disease",
+                    "label": "Pijn/ongemak",
+                    "children": [],
+                    "values": [
+                        "noPain"
+                    ],
+                    "answerLabels": [
+                        "Ik heb geen pijn of ongemak"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "ba210eb4-57d6-41ee-b906-c33addaafd72",
+            "creationTime": "Jan 14, 2020 9:55:27 AM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "fear_sumberness",
+            "label": "ANGST/SOMBERHEID",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "fe63b519-dc4c-49e7-8d25-1b810aa12d34",
+                    "creationTime": "Jan 14, 2020 9:56:05 AM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "fear_sadnees",
+                    "label": "Angst/somberheid",
+                    "children": [],
+                    "values": [
+                        "notAfraid"
+                    ],
+                    "answerLabels": [
+                        "Ik ben niet angstig of somber"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "87e6a396-c82a-4636-9adb-923277e2bfb1",
+            "creationTime": "Dec 19, 2019 1:27:23 PM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "motivation",
+            "label": "MOTIVATIE",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "4d01768a-8d8f-4883-8919-ff53ba884a75",
+                    "creationTime": "Dec 19, 2019 1:27:45 PM",
+                    "updateTime": "May 5, 2020 11:28:39 AM",
+                    "name": "rate_motivation",
+                    "label": "Welk cijfer geef jij voor je motivatie om deel te nemen?",
+                    "children": [],
+                    "values": [
+                        10
+                    ],
+                    "answerLabels": [
+                        10
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "8e18b663-ba1e-48b6-9322-e0a8f00f9bc2",
+                    "creationTime": "Dec 19, 2019 1:28:10 PM",
+                    "updateTime": "Jan 16, 2020 3:38:19 PM",
+                    "name": "how_this_conversation_changed_that",
+                    "label": "En in hoeverre heeft dit gesprek daar verandering in gebracht?",
+                    "children": [],
+                    "values": [
+                        "1"
+                    ],
+                    "answerLabels": [
+                        "1"
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "com.biit.form.result.CategoryResult",
+            "comparationId": "aba0e036-4a49-4f20-b602-516b2d44ab93",
+            "creationTime": "Dec 19, 2019 1:28:44 PM",
+            "updateTime": "May 5, 2020 11:28:39 AM",
+            "name": "completion",
+            "label": "AFRONDING",
+            "children": [
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "3bb8752a-ef83-4781-a65d-fe892d55ed62",
+                    "creationTime": "Apr 16, 2020 1:09:18 PM",
+                    "updateTime": "Apr 16, 2020 1:09:52 PM",
+                    "name": "location_questions",
+                    "label": "Deze vragen hoef je pas bij de intake op locatie in te vullen.",
+                    "children": [],
+                    "values": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "49611f75-0853-47c3-b199-52b685027862",
+                    "creationTime": "Dec 19, 2019 1:29:24 PM",
+                    "updateTime": "Apr 16, 2020 1:09:30 PM",
+                    "name": "information_adding_lifestyle",
+                    "label": "Welke informatie is nog niet aan de orde gekomen maar vind jij  wel relevant voor het leefstijltraject?",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                },
+                {
+                    "class": "com.biit.form.result.QuestionWithValueResult",
+                    "comparationId": "8a929af7-7b6d-4937-9e25-ce61607e4f56",
+                    "creationTime": "Dec 19, 2019 1:30:53 PM",
+                    "updateTime": "Apr 16, 2020 1:09:30 PM",
+                    "name": "promotion_going_home_with",
+                    "label": "Met welke actie ga jij naar huis?",
+                    "children": [],
+                    "values": [
+                        null
+                    ],
+                    "answerLabels": [
+                        null
+                    ]
+                }
+            ]
+        }
+    ]
+}
