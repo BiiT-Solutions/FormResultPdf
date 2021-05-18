@@ -24,7 +24,7 @@
 
 	<scm>
 		<connection>scm:git:git.biit-solutions.com:BiiT/FormResultPdf.git</connection>
-		<connection>scm:git:git.biit-solutions.com:BiiT/FormResultPdf.git</developerConnection>
+		<developerConnection>scm:git:git.biit-solutions.com:BiiT/FormResultPdf.git</developerConnection>
 		<tag>form-result-pdf</tag>
 	</scm>
 
