@@ -8,6 +8,7 @@
 			</run>
 		</groups>
 		<classes>
+			<class name="com.biit.form.result.pdf.EminTest" />
 			<class name="com.biit.form.result.pdf.LecCoolIntake" />
 		</classes>
 	</test>
