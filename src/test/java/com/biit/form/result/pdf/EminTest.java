@@ -1,18 +1,17 @@
 package com.biit.form.result.pdf;
 
+import com.biit.form.result.FormResult;
+import com.biit.form.result.pdf.exceptions.EmptyPdfBodyException;
+import com.biit.form.result.pdf.exceptions.InvalidElementException;
+import com.lowagie.text.DocumentException;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import org.junit.Assert;
-import org.testng.annotations.Test;
-
-import com.biit.form.result.FormResult;
-import com.biit.form.result.pdf.exceptions.EmptyPdfBodyException;
-import com.biit.form.result.pdf.exceptions.InvalidElementException;
-import com.lowagie.text.DocumentException;
 
 @Test(groups = { "eminForm" })
 public class EminTest {
