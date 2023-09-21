@@ -29,8 +29,8 @@
 	</distributionManagement>
 
 	<scm>
-		<connection>scm:git:git.biit-solutions.com:BiiT/FormResultPdf.git</connection>
-		<developerConnection>scm:git:git.biit-solutions.com:BiiT/FormResultPdf.git</developerConnection>
+		<connection>scm:git:git.biit-solutions.com:Java/FormResultPdf.git</connection>
+		<developerConnection>scm:git:git.biit-solutions.com:Java/FormResultPdf.git</developerConnection>
 		<tag>form-result-pdf</tag>
 	</scm>
 
