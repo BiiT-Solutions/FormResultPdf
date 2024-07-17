@@ -74,7 +74,7 @@ public class FormResultTableFactory extends BaseElement {
         table.addCell(createElementCell(question, Theme.getQuestionFont(), Theme.QUESTION_FONT_SIZE, CONTENT_WIDTH));
 
         // Add answers
-        List<String> answers = new ArrayList<>((question.getAnswerLabels() == null || question.getAnswerLabels().isEmpty()) ? question.getAnswers()
+        List<String> answers = new ArrayList<>((question.getAnswerLabels() == null || question.getAnswerLabels().isEmpty()) ? question.getQuestionValues()
                 : question.getAnswerLabels());
         Collections.sort(answers);
 
