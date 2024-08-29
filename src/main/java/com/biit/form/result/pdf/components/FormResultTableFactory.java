@@ -76,8 +76,11 @@ public class FormResultTableFactory extends BaseElement {
 
         // Add answers
         final List<Pair<String, String>> answers = new ArrayList<>();
-        for (int i = 0; i < question.getQuestionValues().size(); i++) {
-            answers.add(new Pair<>(question.getQuestionValues().get(i), i < question.getAnswerLabels().size() ? question.getAnswerLabels().get(i) : null));
+        if (question.getQuestionValues() != null) {
+            for (int i = 0; i < question.getQuestionValues().size(); i++) {
+                answers.add(new Pair<>(question.getQuestionValues().get(i), question.getAnswerLabels() != null
+                        && i < question.getAnswerLabels().size() ? question.getAnswerLabels().get(i) : null));
+            }
         }
 
         answers.sort(Comparator.comparing(p -> p.first));
