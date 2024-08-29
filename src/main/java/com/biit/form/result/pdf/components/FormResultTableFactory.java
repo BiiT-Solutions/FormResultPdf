@@ -14,8 +14,9 @@ import com.lowagie.text.pdf.PdfPTable;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class FormResultTableFactory extends BaseElement {
     private final static int CONTENT_WIDTH = 300;
@@ -74,13 +75,18 @@ public class FormResultTableFactory extends BaseElement {
         table.addCell(createElementCell(question, Theme.getQuestionFont(), Theme.QUESTION_FONT_SIZE, CONTENT_WIDTH));
 
         // Add answers
-        List<String> answers = new ArrayList<>((question.getAnswerLabels() == null || question.getAnswerLabels().isEmpty()) ? question.getQuestionValues()
-                : question.getAnswerLabels());
-        Collections.sort(answers);
+        final List<Pair<String, String>> answers = new ArrayList<>();
+        for (int i = 0; i < question.getQuestionValues().size(); i++) {
+            answers.add(new Pair<>(question.getQuestionValues().get(i), i < question.getAnswerLabels().size() ? question.getAnswerLabels().get(i) : null));
+        }
 
-        for (String answer : answers) {
+        answers.sort(Comparator.comparing(p -> p.first));
+
+        for (Pair<String, String> answer : answers) {
             if (answer != null) {
-                table.addCell(createElementCell(ANSWER_TAB + answer, Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
+                table.addCell(createElementCell(ANSWER_TAB + answer.first + (answer.second != null && !answer.second.trim().isEmpty()
+                                && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : ""),
+                        Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
             }
         }
     }
