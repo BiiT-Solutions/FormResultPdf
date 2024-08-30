@@ -21,6 +21,7 @@ import java.util.Objects;
 public class FormResultTableFactory extends BaseElement {
     private final static int CONTENT_WIDTH = 300;
     private final static String ANSWER_TAB = "    ";
+    private static final int BIG_SEPARATOR_MIN_HEIGHT = 20;
 
     public static PdfPTable createElementPdfStructure(TreeObject element) throws InvalidElementException {
         float[] widths = {1f};
@@ -47,6 +48,8 @@ public class FormResultTableFactory extends BaseElement {
             addCell(table, (CategoryResult) element);
         } else if (element instanceof QuestionWithValueResult) {
             addCell(table, (QuestionWithValueResult) element);
+            final PdfPCell separator = createBigWhiteSeparator();
+            table.addCell(separator);
         } else if (element instanceof RepeatableGroupResult) {
             addCell(table, (RepeatableGroupResult) element);
         } else if (element == null) {
@@ -102,6 +105,18 @@ public class FormResultTableFactory extends BaseElement {
         PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, font, fontSize);
         // cell.setMinimumHeight(TITLE_HEIGHT);
         cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
+        return cell;
+    }
+
+    public static PdfPCell createBigWhiteSeparator() {
+        return createWhiteSeparator(BIG_SEPARATOR_MIN_HEIGHT);
+    }
+
+    public static PdfPCell createWhiteSeparator(int height) {
+        final PdfPCell cell = new PdfPCell();
+        cell.setBackgroundColor(Color.WHITE);
+        setCellProperties(cell);
+        cell.setMinimumHeight(height);
         return cell;
     }
 
