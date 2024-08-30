@@ -7,6 +7,7 @@ import com.biit.form.result.QuestionWithValueResult;
 import com.biit.form.result.RepeatableGroupResult;
 import com.biit.form.result.pdf.exceptions.InvalidElementException;
 import com.biit.form.result.pdf.style.Theme;
+import com.lowagie.text.Chunk;
 import com.lowagie.text.Element;
 import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.PdfPCell;
@@ -21,7 +22,7 @@ import java.util.Objects;
 public class FormResultTableFactory extends BaseElement {
     private final static int CONTENT_WIDTH = 300;
     private final static String ANSWER_TAB = "    ";
-    private static final int BIG_SEPARATOR_MIN_HEIGHT = 20;
+    private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
 
     public static PdfPTable createElementPdfStructure(TreeObject element) throws InvalidElementException {
         float[] widths = {1f};
@@ -91,7 +92,7 @@ public class FormResultTableFactory extends BaseElement {
         for (Pair<String, String> answer : answers) {
             if (answer != null) {
                 table.addCell(createElementCell(ANSWER_TAB + answer.first + (answer.second != null && !answer.second.trim().isEmpty()
-                                && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : ""),
+                                && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : "") + Chunk.NEWLINE,
                         Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
             }
         }
