@@ -92,7 +92,7 @@ public class FormResultTableFactory extends BaseElement {
         for (Pair<String, String> answer : answers) {
             if (answer != null) {
                 table.addCell(createElementCell(ANSWER_TAB + answer.first + (answer.second != null && !answer.second.trim().isEmpty()
-                                && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : "") + Chunk.NEWLINE,
+                                && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : "") + "\n",
                         Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
             }
         }
