@@ -23,6 +23,7 @@ public class FormResultTableFactory extends BaseElement {
     private final static int CONTENT_WIDTH = 300;
     private final static String ANSWER_TAB = "    ";
     private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
+    private static final int SMALL_SEPARATOR_MIN_HEIGHT = 6;
 
     public static PdfPTable createElementPdfStructure(TreeObject element) throws InvalidElementException {
         float[] widths = {1f};
@@ -94,6 +95,7 @@ public class FormResultTableFactory extends BaseElement {
                 table.addCell(createElementCell(ANSWER_TAB + answer.first + (answer.second != null && !answer.second.trim().isEmpty()
                                 && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : "") + "\n",
                         Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
+                table.addCell(createWhiteSeparator(SMALL_SEPARATOR_MIN_HEIGHT));
             }
         }
     }
