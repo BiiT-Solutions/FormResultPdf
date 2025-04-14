@@ -21,8 +21,8 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class FormResultTableFactory extends BaseElement {
-    private final static int CONTENT_WIDTH = 300;
-    private final static String ANSWER_TAB = "    ";
+    private static final int CONTENT_WIDTH = 300;
+    private static final String ANSWER_TAB = "    ";
     private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
     private static final int SMALL_SEPARATOR_MIN_HEIGHT = 6;
 

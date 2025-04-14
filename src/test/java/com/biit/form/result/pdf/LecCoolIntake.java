@@ -16,7 +16,7 @@ import com.lowagie.text.DocumentException;
 
 @Test(groups = { "lecCoolIntake" })
 public class LecCoolIntake {
-	private final static String FORM_AS_JSON = "LEC Cool Intake.json";
+	private static final String FORM_AS_JSON = "LEC Cool Intake.json";
 
 	@Test
 	public void createLecCoolIntakePdf() throws IOException, URISyntaxException, EmptyPdfBodyException, DocumentException, InvalidElementException {

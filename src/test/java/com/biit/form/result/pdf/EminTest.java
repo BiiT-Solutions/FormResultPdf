@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 @Test(groups = {"eminForm"})
 public class EminTest {
     protected static final String OUTPUT_FOLDER = System.getProperty("java.io.tmpdir") + File.separator + "PdfTests";
-    private final static String FORM_AS_JSON = "Emin Formulario On-line.json";
+    private static final String FORM_AS_JSON = "Emin Formulario On-line.json";
 
     @BeforeClass
     public void prepareFolder() throws IOException {

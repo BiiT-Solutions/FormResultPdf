@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 
 @Test(groups = { "answerWithTranslations" })
 public class AnswerWithTranslationTests {
-	private final static String FORM_AS_JSON = "answersWithTranslation.json";
+	private static final String FORM_AS_JSON = "answersWithTranslation.json";
 
 	@Test
 	public void createPdf() throws IOException, URISyntaxException, EmptyPdfBodyException, DocumentException, InvalidElementException {
