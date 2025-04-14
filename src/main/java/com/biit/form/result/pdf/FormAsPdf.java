@@ -10,44 +10,56 @@ import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
 
+import java.util.Locale;
+
 public class FormAsPdf extends PdfDocument {
-	private FormResult formResult;
-	private String footer;
+    private final FormResult formResult;
+    private final String footer;
+    private final Locale locale;
 
-	public FormAsPdf(FormResult formResult, String footer) {
-		super();
-		this.formResult = formResult;
-		this.footer = footer;
-	}
+    public FormAsPdf(FormResult formResult, String footer) {
+        super();
+        this.formResult = formResult;
+        this.footer = footer;
+        this.locale = null;
+    }
 
-	@Override
-	protected void addEvent(PdfWriter writer) {
-		if (formResult != null) {
-			FormPageEvent formPageEvent = new FormPageEvent();
-			if (footer != null) {
-				formPageEvent.setFooter(footer);
-			} else {
-				formPageEvent.setFooter(formResult.getLabel());
-			}
-			writer.setPageEvent(formPageEvent);
-		}
-	}
+    public FormAsPdf(FormResult formResult, String footer, Locale locale) {
+        super();
+        this.formResult = formResult;
+        this.footer = footer;
+        this.locale = locale;
+    }
 
-	@Override
-	protected Rectangle getPageSize() {
-		return PageSize.A4;
-	}
+    @Override
+    protected void addEvent(PdfWriter writer) {
+        if (formResult != null) {
+            FormPageEvent formPageEvent = new FormPageEvent();
+            if (footer != null) {
+                formPageEvent.setFooter(footer);
+            } else {
+                formPageEvent.setFooter(formResult.getLabel());
+            }
+            writer.setPageEvent(formPageEvent);
+        }
+    }
 
-	@Override
-	protected void createPagePDF(Document document) throws InvalidElementException, DocumentException {
-		PdfPTable mainTable = FormResultTableFactory.createElementPdfStructure(formResult);
-		document.add(mainTable);
-		document.newPage();
-	}
+    @Override
+    protected Rectangle getPageSize() {
+        return PageSize.A4;
+    }
 
-	@Override
-	protected void addDocumentWriterEvents(PdfWriter writer) {
-		// No background.
-	}
+
+    @Override
+    protected void createPagePDF(Document document) throws InvalidElementException, DocumentException {
+        PdfPTable mainTable = FormResultTableFactory.createElementPdfStructure(formResult, locale);
+        document.add(mainTable);
+        document.newPage();
+    }
+
+    @Override
+    protected void addDocumentWriterEvents(PdfWriter writer) {
+        // No background.
+    }
 
 }

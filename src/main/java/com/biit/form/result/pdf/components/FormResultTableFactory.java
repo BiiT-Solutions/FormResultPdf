@@ -17,6 +17,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 public class FormResultTableFactory extends BaseElement {
@@ -28,21 +29,27 @@ public class FormResultTableFactory extends BaseElement {
     private static final String LOCALIZATION_SYSTEM_FIELD = "localization";
     private static String[] localizationLanguages;
 
+    public static PdfPTable createElementPdfStructure(TreeObject element, Locale locale) throws InvalidElementException {
+        if (locale != null) {
+            localizationLanguages = new String[]{locale.getLanguage().toLowerCase()};
+        }
+        return createElementPdfStructure(element);
+    }
+
     public static PdfPTable createElementPdfStructure(TreeObject element) throws InvalidElementException {
         float[] widths = {1f};
         PdfPTable table = new PdfPTable(widths);
 
-        element.getAllChildrenInHierarchy(SystemFieldResult.class).forEach(child -> {
-            if (Objects.equals(child.getName(), LOCALIZATION_SYSTEM_FIELD) && child.getValue() != null) {
-                localizationLanguages = child.getValue().split(",");
-            }
-        });
-
+        if (localizationLanguages == null) {
+            element.getAllChildrenInHierarchy(SystemFieldResult.class).forEach(child -> {
+                if (Objects.equals(child.getName(), LOCALIZATION_SYSTEM_FIELD) && child.getValue() != null) {
+                    localizationLanguages = child.getValue().split(",");
+                }
+            });
+        }
 
         setTablePropierties(table);
-
         createElementPdfStructure(table, element);
-
         return table;
     }
 
