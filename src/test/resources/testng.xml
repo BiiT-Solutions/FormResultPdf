@@ -5,11 +5,13 @@
 			<run>
 				<include name="eminForm" />
 				<include name="lecCoolIntake" />				
+				<include name="answerWithTranslations" />
 			</run>
 		</groups>
 		<classes>
 			<class name="com.biit.form.result.pdf.EminTest" />
 			<class name="com.biit.form.result.pdf.LecCoolIntake" />
+			<class name="com.biit.form.result.pdf.AnswerWithTranslationTests" />
 		</classes>
 	</test>
 </suite>

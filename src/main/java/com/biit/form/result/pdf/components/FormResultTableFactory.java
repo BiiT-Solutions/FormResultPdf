@@ -5,9 +5,9 @@ import com.biit.form.result.CategoryResult;
 import com.biit.form.result.FormResult;
 import com.biit.form.result.QuestionWithValueResult;
 import com.biit.form.result.RepeatableGroupResult;
+import com.biit.form.result.SystemFieldResult;
 import com.biit.form.result.pdf.exceptions.InvalidElementException;
 import com.biit.form.result.pdf.style.Theme;
-import com.lowagie.text.Chunk;
 import com.lowagie.text.Element;
 import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.PdfPCell;
@@ -25,9 +25,20 @@ public class FormResultTableFactory extends BaseElement {
     private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
     private static final int SMALL_SEPARATOR_MIN_HEIGHT = 6;
 
+    private static final String LOCALIZATION_SYSTEM_FIELD = "localization";
+    private static String[] localizationLanguages;
+
     public static PdfPTable createElementPdfStructure(TreeObject element) throws InvalidElementException {
         float[] widths = {1f};
         PdfPTable table = new PdfPTable(widths);
+
+        element.getAllChildrenInHierarchy(SystemFieldResult.class).forEach(child -> {
+            if (Objects.equals(child.getName(), LOCALIZATION_SYSTEM_FIELD) && child.getValue() != null) {
+                localizationLanguages = child.getValue().split(",");
+            }
+        });
+
+
         setTablePropierties(table);
 
         createElementPdfStructure(table, element);
@@ -38,8 +49,10 @@ public class FormResultTableFactory extends BaseElement {
     private static void createElementPdfStructure(PdfPTable table, TreeObject element) throws InvalidElementException {
         addCell(table, element);
 
-        for (TreeObject child : element.getAllNotHiddenChildren()) {
-            table.addCell(createElementPdfStructure(child));
+        if (element != null) {
+            for (TreeObject child : element.getAllNotHiddenChildren()) {
+                table.addCell(createElementPdfStructure(child));
+            }
         }
     }
 
@@ -54,6 +67,8 @@ public class FormResultTableFactory extends BaseElement {
             table.addCell(separator);
         } else if (element instanceof RepeatableGroupResult) {
             addCell(table, (RepeatableGroupResult) element);
+        } else if (element instanceof SystemFieldResult) {
+            //Ignore system fields.
         } else if (element == null) {
             //Skip null elements.
         } else {
@@ -83,8 +98,23 @@ public class FormResultTableFactory extends BaseElement {
         final List<Pair<String, String>> answers = new ArrayList<>();
         if (question.getQuestionValues() != null) {
             for (int i = 0; i < question.getQuestionValues().size(); i++) {
-                answers.add(new Pair<>(question.getQuestionValues().get(i), question.getAnswerLabels() != null
-                        && i < question.getAnswerLabels().size() ? question.getAnswerLabels().get(i) : null));
+                boolean translated = false;
+                if (localizationLanguages != null) {
+                    for (String language : localizationLanguages) {
+                        final String translatedLabel = question.getAnswerLabelTranslations() != null
+                                && question.getAnswerLabelTranslations().get(question.getQuestionValues().get(i)) != null
+                                && question.getAnswerLabelTranslations().get(question.getQuestionValues().get(i)).get(language.toUpperCase()) != null
+                                ? question.getAnswerLabelTranslations().get(question.getQuestionValues().get(i)).get(language.toUpperCase()) : null;
+                        if (translatedLabel != null) {
+                            answers.add(new Pair<>(question.getQuestionValues().get(i), translatedLabel));
+                            translated = true;
+                        }
+                    }
+                }
+                if (!translated) {
+                    answers.add(new Pair<>(question.getQuestionValues().get(i), question.getAnswerLabels() != null
+                            && i < question.getAnswerLabels().size() ? question.getAnswerLabels().get(i) : null));
+                }
             }
         }
 
@@ -101,12 +131,20 @@ public class FormResultTableFactory extends BaseElement {
     }
 
     protected static PdfPCell createElementCell(TreeObject element, BaseFont font, int fontSize, int maxColumnWidth) {
+        if (localizationLanguages != null) {
+            for (String language : localizationLanguages) {
+                //If translation on the required language exists, use it.
+                final String translation = element.getLabelTranslations().get(language.toUpperCase());
+                if (translation != null) {
+                    return createElementCell(translation, font, fontSize, maxColumnWidth);
+                }
+            }
+        }
         return createElementCell(element.getLabel(), font, fontSize, maxColumnWidth);
     }
 
     protected static PdfPCell createElementCell(String text, BaseFont font, int fontSize, int maxColumnWidth) {
         PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, font, fontSize);
-        // cell.setMinimumHeight(TITLE_HEIGHT);
         cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
         return cell;
     }

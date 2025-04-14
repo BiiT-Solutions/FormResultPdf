@@ -1,0 +1,77 @@
+{
+  "creationTime": "2025-08-04T12:06:40.000Z",
+  "updateTime": "2025-08-04T12:06:40.000Z",
+  "class": "com.biit.form.result.FormResult",
+  "submittedAt": "2025-04-14T14:02:44.592Z",
+  "children": [
+    {
+      "creationTime": "2025-08-04T12:01:08.000Z",
+      "updateTime": "2025-08-04T12:03:49.000Z",
+      "class": "com.biit.form.result.CategoryResult",
+      "name": "category",
+      "label": "category",
+      "labelTranslations": {
+        "NL": "Categochung",
+        "ES": "Categoria"
+      },
+      "comparationId": "4a3b0406-db49-4ab3-b8d1-cd9ad58b05f0",
+      "children": [
+        {
+          "creationTime": "2025-08-04T12:02:38.000Z",
+          "updateTime": "2025-08-04T12:03:49.000Z",
+          "class": "com.biit.form.result.RepeatableGroupResult",
+          "name": "group",
+          "label": "group",
+          "labelTranslations": {
+            "NL": "Goupchung",
+            "ES": "Grupo"
+          },
+          "comparationId": "7d407c89-2290-4e44-8c02-e20a6a413f4a",
+          "children": [
+            {
+              "creationTime": "2025-08-04T12:02:55.000Z",
+              "updateTime": "2025-08-04T12:03:49.000Z",
+              "class": "com.biit.form.result.QuestionWithValueResult",
+              "values": [
+                "answer1"
+              ],
+              "answerLabels": [
+                "Answer"
+              ],
+              "name": "question",
+              "label": "question",
+              "labelTranslations": {
+                "NL": "QuestionChung",
+                "ES": "Pregunta"
+              },
+              "comparationId": "e1161e1c-89bf-46bc-9f79-1cc746375d6d",
+              "answerLabelTranslations": {
+                "answer1": {
+                  "NL": "Answerchung",
+                  "ES": "Respuesta"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "creationTime": null,
+          "updateTime": null,
+          "class": "com.biit.form.result.SystemFieldResult",
+          "name": "localization",
+          "labelTranslations": {},
+          "value": "es,en"
+        }
+      ]
+    }
+  ],
+  "label": "TestForm",
+  "labelTranslations": {
+    "NL": "Testung Form",
+    "ES": "Formulario de Test"
+  },
+  "organizationId": 18903,
+  "version": 1,
+  "name": "form",
+  "comparationId": "f1140f2f-ddc7-44f4-8100-9d90170a8eb0"
+}
