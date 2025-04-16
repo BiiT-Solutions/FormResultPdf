@@ -127,12 +127,12 @@ public class FormResultTableFactory extends BaseElement {
             }
         }
 
-        answers.sort(Comparator.comparing(p -> p.first));
+        answers.sort(Comparator.comparing(Pair::getFirst));
 
         for (Pair<String, String> answer : answers) {
             if (answer != null) {
-                table.addCell(createElementCell(ANSWER_TAB + answer.first + (answer.second != null && !answer.second.trim().isEmpty()
-                                && !Objects.equals(answer.first, answer.second) ? " (" + answer.second + ")" : "") + "\n",
+                table.addCell(createElementCell(ANSWER_TAB + answer.getFirst() + (answer.getSecond() != null && !answer.getSecond().trim().isEmpty()
+                                && !Objects.equals(answer.getFirst(), answer.getSecond()) ? " (" + answer.getSecond() + ")" : "") + "\n",
                         Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
                 table.addCell(createWhiteSeparator(SMALL_SEPARATOR_MIN_HEIGHT));
             }
