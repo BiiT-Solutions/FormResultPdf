@@ -9,11 +9,15 @@ import java.io.InputStream;
 /**
  * Class with utility methods
  */
-public class FormGeneratorPdf {
+public final class FormGeneratorPdf {
+
+    private FormGeneratorPdf() {
+
+    }
 
     public static InputStream generatePdf(FormAsPdf generator) throws Exception {
         if (generator != null) {
-            byte[] data = generator.generate();
+            final byte[] data = generator.generate();
             // convert array of bytes into file
             return new ByteArrayInputStream(data);
         }
@@ -22,7 +26,7 @@ public class FormGeneratorPdf {
 
     public static void generatePdfAsFile(String filename, FormAsPdf generator) throws Exception {
         if (generator != null) {
-            byte[] data = generator.generate();
+            final byte[] data = generator.generate();
             // convert array of bytes into file
             try (FileOutputStream fileOuputStream = new FileOutputStream(filename)) {
                 fileOuputStream.write(data);

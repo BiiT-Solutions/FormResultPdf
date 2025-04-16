@@ -34,7 +34,7 @@ public class FormAsPdf extends PdfDocument {
     @Override
     protected void addEvent(PdfWriter writer) {
         if (formResult != null) {
-            FormPageEvent formPageEvent = new FormPageEvent();
+            final FormPageEvent formPageEvent = new FormPageEvent();
             if (footer != null) {
                 formPageEvent.setFooter(footer);
             } else {
@@ -52,7 +52,7 @@ public class FormAsPdf extends PdfDocument {
 
     @Override
     protected void createPagePDF(Document document) throws InvalidElementException, DocumentException {
-        PdfPTable mainTable = FormResultTableFactory.createElementPdfStructure(formResult, locale);
+        final PdfPTable mainTable = FormResultTableFactory.createElementPdfStructure(formResult, locale);
         document.add(mainTable);
         document.newPage();
     }

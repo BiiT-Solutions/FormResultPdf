@@ -7,6 +7,7 @@ import com.biit.form.result.QuestionWithValueResult;
 import com.biit.form.result.RepeatableGroupResult;
 import com.biit.form.result.SystemFieldResult;
 import com.biit.form.result.pdf.exceptions.InvalidElementException;
+import com.biit.form.result.pdf.logger.PdfExporterLog;
 import com.biit.form.result.pdf.style.Theme;
 import com.lowagie.text.Element;
 import com.lowagie.text.pdf.BaseFont;
@@ -25,6 +26,7 @@ public class FormResultTableFactory extends BaseElement {
     private static final String ANSWER_TAB = "    ";
     private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
     private static final int SMALL_SEPARATOR_MIN_HEIGHT = 6;
+    private static final int VERY_BIG_SEPARATOR_MIN_HEIGHT = 20;
 
     private static final String LOCALIZATION_SYSTEM_FIELD = "localization";
     private static String[] localizationLanguages;
@@ -37,8 +39,8 @@ public class FormResultTableFactory extends BaseElement {
     }
 
     public static PdfPTable createElementPdfStructure(TreeObject element) throws InvalidElementException {
-        float[] widths = {1f};
-        PdfPTable table = new PdfPTable(widths);
+        final float[] widths = {1f};
+        final PdfPTable table = new PdfPTable(widths);
 
         if (localizationLanguages == null) {
             element.getAllChildrenInHierarchy(SystemFieldResult.class).forEach(child -> {
@@ -75,9 +77,9 @@ public class FormResultTableFactory extends BaseElement {
         } else if (element instanceof RepeatableGroupResult) {
             addCell(table, (RepeatableGroupResult) element);
         } else if (element instanceof SystemFieldResult) {
-            //Ignore system fields.
+            PdfExporterLog.debug(FormResultTableFactory.class.getName(), "Ignoring System Fields.");
         } else if (element == null) {
-            //Skip null elements.
+            PdfExporterLog.debug(FormResultTableFactory.class.getName(), "Ignoring null elements.");
         } else {
             throw new InvalidElementException("Element '" + element + "' cannot be represented in the PDF. Not defined.");
         }
@@ -88,12 +90,12 @@ public class FormResultTableFactory extends BaseElement {
     }
 
     private static void addCell(PdfPTable table, CategoryResult category) {
-        table.addCell(createWhiteSeparator(20));
+        table.addCell(createWhiteSeparator(VERY_BIG_SEPARATOR_MIN_HEIGHT));
         table.addCell(createElementCell(category, Theme.getCategoryFont(), Theme.CATEGORY_FONT_SIZE, CONTENT_WIDTH));
     }
 
     private static void addCell(PdfPTable table, RepeatableGroupResult group) {
-        table.addCell(createWhiteSeparator(10));
+        table.addCell(createWhiteSeparator(BIG_SEPARATOR_MIN_HEIGHT));
         table.addCell(createElementCell(group, Theme.getGroupFont(), Theme.GROUP_FONT_SIZE, CONTENT_WIDTH));
     }
 
@@ -151,7 +153,7 @@ public class FormResultTableFactory extends BaseElement {
     }
 
     protected static PdfPCell createElementCell(String text, BaseFont font, int fontSize, int maxColumnWidth) {
-        PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, font, fontSize);
+        final PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, font, fontSize);
         cell.setVerticalAlignment(Element.ALIGN_MIDDLE);
         return cell;
     }

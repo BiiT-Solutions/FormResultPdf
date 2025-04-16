@@ -19,43 +19,51 @@ import com.lowagie.text.pdf.PdfWriter;
  * with page count and titles.
  */
 public class FormPageEvent extends PdfPageEventHelper {
-	private String footer;
-	private PdfTemplate total;
 
-	public void setFooter(String footer) {
-		this.footer = footer;
-	}
+    private static final int TEMPLATE_WIDTH = 30;
+    private static final int TEMPLATE_HEIGHT = 16;
+    private static final int COLUMN_WIDTH = 24;
+    private static final int TOTAL_WIDTH = 527;
+    private static final int FIXED_EIGHT = 20;
+    private static final int XPOS = 34;
 
-	@Override
-	public void onOpenDocument(PdfWriter writer, Document document) {
-		total = writer.getDirectContent().createTemplate(30, 16);
-	}
+    private String footer;
+    private PdfTemplate total;
 
-	@Override
-	public void onEndPage(PdfWriter writer, Document document) {
-		PdfPTable table = new PdfPTable(3);
+    public void setFooter(String footer) {
+        this.footer = footer;
+    }
 
-		try {
-			table.setWidths(new int[] { 24, 24, 2 });
-			table.setTotalWidth(527);
-			table.setLockedWidth(true);
-			table.getDefaultCell().setFixedHeight(20);
-			table.getDefaultCell().setBorder(Rectangle.TOP);
-			table.addCell(footer);
-			table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_RIGHT);
-			table.addCell(String.format("Page %d of", writer.getPageNumber()));
-			PdfPCell cell = new PdfPCell(Image.getInstance(total));
-			cell.setBorder(Rectangle.TOP);
-			table.addCell(cell);
-			table.writeSelectedRows(0, -1, 34, document.bottom(), writer.getDirectContent());
-		} catch (DocumentException de) {
-			throw new ExceptionConverter(de);
-		}
-	}
+    @Override
+    public void onOpenDocument(PdfWriter writer, Document document) {
+        total = writer.getDirectContent().createTemplate(TEMPLATE_WIDTH, TEMPLATE_HEIGHT);
+    }
 
-	@Override
-	public void onCloseDocument(PdfWriter writer, Document document) {
-		ColumnText.showTextAligned(total, Element.ALIGN_LEFT, new Phrase(String.valueOf(writer.getPageNumber() - 1)), 2, 2, 0);
-	}
+    @Override
+    public void onEndPage(PdfWriter writer, Document document) {
+        final PdfPTable table = new PdfPTable(3);
+
+        try {
+            table.setWidths(new int[]{COLUMN_WIDTH, COLUMN_WIDTH, 2});
+            table.setTotalWidth(TOTAL_WIDTH);
+            table.setLockedWidth(true);
+            table.getDefaultCell().setFixedHeight(FIXED_EIGHT);
+            table.getDefaultCell().setBorder(Rectangle.TOP);
+            table.addCell(footer);
+            table.getDefaultCell().setHorizontalAlignment(Element.ALIGN_RIGHT);
+            table.addCell(String.format("Page %d of", writer.getPageNumber()));
+            final PdfPCell cell = new PdfPCell(Image.getInstance(total));
+            cell.setBorder(Rectangle.TOP);
+            table.addCell(cell);
+            table.writeSelectedRows(0, -1, XPOS, document.bottom(), writer.getDirectContent());
+        } catch (DocumentException de) {
+            throw new ExceptionConverter(de);
+        }
+    }
+
+    @Override
+    public void onCloseDocument(PdfWriter writer, Document document) {
+        ColumnText.showTextAligned(total, Element.ALIGN_LEFT, new Phrase(String.valueOf(writer.getPageNumber() - 1)), 2, 2, 0);
+    }
 
 }

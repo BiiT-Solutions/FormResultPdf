@@ -1,9 +1,9 @@
 package com.biit.form.result.pdf.exceptions;
 
 public class EmptyPdfBodyException extends Exception {
-	private static final long serialVersionUID = -8207546492378482320L;
+    private static final long serialVersionUID = -8207546492378482320L;
 
-	public EmptyPdfBodyException(String text) {
-		super(text);
-	}
+    public EmptyPdfBodyException(String text) {
+        super(text);
+    }
 }
