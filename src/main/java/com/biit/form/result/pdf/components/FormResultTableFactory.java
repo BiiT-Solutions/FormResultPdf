@@ -22,6 +22,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class FormResultTableFactory extends BaseElement {
+    private static final String DEFAULT_LANGUAGE = "EN";
     private static final int CONTENT_WIDTH = 300;
     private static final String ANSWER_TAB = "    ";
     private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
@@ -117,6 +118,11 @@ public class FormResultTableFactory extends BaseElement {
                         if (translatedLabel != null) {
                             answers.add(new Pair<>(question.getQuestionValues().get(i), translatedLabel));
                             translated = true;
+                        }
+                        if (translated || Objects.equals(DEFAULT_LANGUAGE, language)) {
+                            //Language has been found. Stop searching.
+                            //A selected one or the default one (English).
+                            break;
                         }
                     }
                 }
