@@ -25,17 +25,23 @@ public class FormResultTableFactory extends BaseElement {
     private static final String DEFAULT_LANGUAGE = "EN";
     private static final int CONTENT_WIDTH = 300;
     private static final String ANSWER_TAB = "    ";
-    private static final int BIG_SEPARATOR_MIN_HEIGHT = 10;
-    private static final int SMALL_SEPARATOR_MIN_HEIGHT = 6;
-    private static final int VERY_BIG_SEPARATOR_MIN_HEIGHT = 20;
+    private static final int GROUP_SEPARATOR_MIN_HEIGHT = 10;
+    private static final int ANSWERS_SEPARATOR_MIN_HEIGHT = 6;
+    private static final int CATEGORY_SEPARATOR_MIN_HEIGHT = 20;
 
     private static final String LOCALIZATION_SYSTEM_FIELD = "localization";
     private static String[] localizationLanguages;
 
-    public static PdfPTable createElementPdfStructure(TreeObject element, Locale locale) throws InvalidElementException {
+    private static boolean showTechnicalNames;
+    private static boolean disableTranslations;
+
+    public static PdfPTable createElementPdfStructure(TreeObject element, Locale locale, boolean showTechnicalName, boolean disableTranslation)
+            throws InvalidElementException {
         if (locale != null) {
             localizationLanguages = new String[]{locale.getLanguage().toLowerCase()};
         }
+        showTechnicalNames = showTechnicalName;
+        disableTranslations = disableTranslation;
         return createElementPdfStructure(element);
     }
 
@@ -67,16 +73,16 @@ public class FormResultTableFactory extends BaseElement {
     }
 
     private static void addCell(PdfPTable table, TreeObject element) throws InvalidElementException {
-        if (element instanceof FormResult) {
-            addCell(table, (FormResult) element);
-        } else if (element instanceof CategoryResult) {
-            addCell(table, (CategoryResult) element);
-        } else if (element instanceof QuestionWithValueResult) {
-            addCell(table, (QuestionWithValueResult) element);
+        if (element instanceof FormResult formResult) {
+            addCell(table, formResult);
+        } else if (element instanceof CategoryResult categoryResult) {
+            addCell(table, categoryResult);
+        } else if (element instanceof QuestionWithValueResult questionWithValueResult) {
+            addCell(table, questionWithValueResult);
             final PdfPCell separator = createBigWhiteSeparator();
             table.addCell(separator);
-        } else if (element instanceof RepeatableGroupResult) {
-            addCell(table, (RepeatableGroupResult) element);
+        } else if (element instanceof RepeatableGroupResult repeatableGroupResult) {
+            addCell(table, repeatableGroupResult);
         } else if (element instanceof SystemFieldResult) {
             PdfExporterLog.debug(FormResultTableFactory.class.getName(), "Ignoring System Fields.");
         } else if (element == null) {
@@ -91,12 +97,12 @@ public class FormResultTableFactory extends BaseElement {
     }
 
     private static void addCell(PdfPTable table, CategoryResult category) {
-        table.addCell(createWhiteSeparator(VERY_BIG_SEPARATOR_MIN_HEIGHT));
+        table.addCell(createWhiteSeparator(CATEGORY_SEPARATOR_MIN_HEIGHT));
         table.addCell(createElementCell(category, Theme.getCategoryFont(), Theme.CATEGORY_FONT_SIZE, CONTENT_WIDTH));
     }
 
     private static void addCell(PdfPTable table, RepeatableGroupResult group) {
-        table.addCell(createWhiteSeparator(BIG_SEPARATOR_MIN_HEIGHT));
+        table.addCell(createWhiteSeparator(GROUP_SEPARATOR_MIN_HEIGHT));
         table.addCell(createElementCell(group, Theme.getGroupFont(), Theme.GROUP_FONT_SIZE, CONTENT_WIDTH));
     }
 
@@ -109,7 +115,7 @@ public class FormResultTableFactory extends BaseElement {
         if (question.getQuestionValues() != null) {
             for (int i = 0; i < question.getQuestionValues().size(); i++) {
                 boolean translated = false;
-                if (localizationLanguages != null) {
+                if (!disableTranslations && localizationLanguages != null) {
                     for (String language : localizationLanguages) {
                         final String translatedLabel = question.getAnswerLabelTranslations() != null
                                 && question.getAnswerLabelTranslations().get(question.getQuestionValues().get(i)) != null
@@ -137,26 +143,67 @@ public class FormResultTableFactory extends BaseElement {
 
         for (Pair<String, String> answer : answers) {
             if (answer != null) {
-                table.addCell(createElementCell(ANSWER_TAB + answer.getFirst() + (answer.getSecond() != null && !answer.getSecond().trim().isEmpty()
-                                && !Objects.equals(answer.getFirst(), answer.getSecond()) ? " (" + answer.getSecond() + ")" : "") + "\n",
-                        Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
-                table.addCell(createWhiteSeparator(SMALL_SEPARATOR_MIN_HEIGHT));
+                final String text = createAnswerText(answer);
+                table.addCell(createElementCell(text, Theme.getAnswerFont(), Theme.ANSWER_FONT_SIZE, CONTENT_WIDTH));
+                table.addCell(createWhiteSeparator(ANSWERS_SEPARATOR_MIN_HEIGHT));
             }
         }
     }
 
+
+    private static String createAnswerText(Pair<String, String> answer) {
+        final StringBuilder text = new StringBuilder();
+        text.append(ANSWER_TAB);
+        if (showTechnicalNames) {
+            text.append(answer.getFirst());
+        }
+        if (answer.getSecond() != null && !answer.getSecond().trim().isEmpty() && !Objects.equals(answer.getFirst(), answer.getSecond())) {
+            if (showTechnicalNames) {
+                text.append(" (");
+            }
+            text.append(answer.getSecond());
+            if (showTechnicalNames) {
+                text.append(")");
+            }
+        }
+        text.append("\n");
+        return text.toString();
+    }
+
+
     protected static PdfPCell createElementCell(TreeObject element, BaseFont font, int fontSize, int maxColumnWidth) {
-        if (localizationLanguages != null) {
+        if (!disableTranslations && localizationLanguages != null) {
             for (String language : localizationLanguages) {
+                if (Objects.equals(DEFAULT_LANGUAGE, language)) {
+                    //English is the default language.
+                    break;
+                }
                 //If translation on the required language exists, use it.
                 final String translation = element.getLabelTranslations().get(language.toUpperCase());
                 if (translation != null) {
-                    return createElementCell(translation, font, fontSize, maxColumnWidth);
+                    return createElementCell(createTreeObjectTechnicalNameText(element.getName(), translation), font, fontSize, maxColumnWidth);
                 }
             }
         }
-        return createElementCell(element.getLabel(), font, fontSize, maxColumnWidth);
+        return createElementCell(createTreeObjectTechnicalNameText(element.getName(), element.getLabel()), font, fontSize, maxColumnWidth);
     }
+
+
+    private static String createTreeObjectTechnicalNameText(String technicalName, String label) {
+        final StringBuilder text = new StringBuilder();
+        if (showTechnicalNames) {
+            text.append(technicalName);
+        }
+        if (showTechnicalNames) {
+            text.append(" (");
+        }
+        text.append(label);
+        if (showTechnicalNames) {
+            text.append(")");
+        }
+        return text.toString();
+    }
+
 
     protected static PdfPCell createElementCell(String text, BaseFont font, int fontSize, int maxColumnWidth) {
         final PdfPCell cell = getCell(text, 0, 1, Element.ALIGN_LEFT, Color.WHITE, font, fontSize);
@@ -164,16 +211,14 @@ public class FormResultTableFactory extends BaseElement {
         return cell;
     }
 
+
     public static PdfPCell createBigWhiteSeparator() {
-        return createWhiteSeparator(BIG_SEPARATOR_MIN_HEIGHT);
+        return createWhiteSeparator(GROUP_SEPARATOR_MIN_HEIGHT);
     }
 
+
     public static PdfPCell createWhiteSeparator(int height) {
-        final PdfPCell cell = new PdfPCell();
-        cell.setBackgroundColor(Color.WHITE);
-        setCellProperties(cell);
-        cell.setMinimumHeight(height);
-        return cell;
+        return BaseElement.createWhiteSeparator(height);
     }
 
 }
