@@ -181,11 +181,11 @@ public class FormResultTableFactory extends BaseElement {
                 //If translation on the required language exists, use it.
                 final String translation = element.getLabelTranslations().get(language.toUpperCase());
                 if (translation != null) {
-                    return createElementCell(createTreeObjectTechnicalNameText(element.getName(), translation), font, fontSize, maxColumnWidth);
+                    return createElementCell(translation, font, fontSize, maxColumnWidth);
                 }
             }
         }
-        return createElementCell(createTreeObjectTechnicalNameText(element.getName(), element.getLabel()), font, fontSize, maxColumnWidth);
+        return createElementCell(element.getLabel(), font, fontSize, maxColumnWidth);
     }
 
 
